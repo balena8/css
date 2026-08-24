@@ -1,0 +1,1191 @@
+﻿{
+    "testName":  "load-single-parallel",
+    "mode":  "single",
+    "execution":  "parallel",
+    "totalRequests":  50,
+    "totalBatches":  0,
+    "receiptsPerBatch":  0,
+    "totalReceipts":  50,
+    "successCount":  4,
+    "failedCount":  46,
+    "averageDurationMs":  140488.89,
+    "minDurationMs":  21842.61,
+    "maxDurationMs":  267470.05,
+    "generatedAt":  "2026-06-13 01:38:06",
+    "results":  [
+                    {
+                        "requestNumber":  1,
+                        "userId":  "single-user-1",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  76700.82,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "c686c23a-4bca-4877-9eb5-100bf09001c0",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  2,
+                        "userId":  "single-user-2",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "success",
+                        "durationMs":  21842.61,
+                        "response":  {
+                                         "userId":  "single-user-2",
+                                         "count":  1,
+                                         "results":  [
+                                                         {
+                                                             "status":  "success",
+                                                             "message":  "Receipt processed successfully, but enrichment failed: receipt enrichment failed after 4 attempts: send enrichment prompt to llm: API error (status 429): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 59.112970301s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"59s\"\n      }\n    ]\n  }\n}\n",
+                                                             "receiptJson":  {
+                                                                                 "fiscalNumber":  "3000909908",
+                                                                                 "localNumber":  "696582",
+                                                                                 "total":  437.4,
+                                                                                 "dateTime":  "2026-04-29 22:20:06",
+                                                                                 "taxNumber":  "ПН 309823604614",
+                                                                                 "factoryNumber":  "СП802406529",
+                                                                                 "receiptText":  "                      ТОВ \"ОМЕГА\"\r\n                        магазин\r\nУКРАЇНА, М.КИЇВ ГОЛОСІЇВСЬКИЙ Р-Н, ВУЛ.ВАСИЛЬКІВСЬКА, БУ\r\nД.34\r\n                      ІД 30982361\r\n                    ПН 309823604614\r\n                      Касовий чек\r\n            РРО ФН 3000909908 ЗН СП802406529\r\n                     ЧЕК ФН 696582\r\n--------------------------------------------------------\r\nАРТ.№ 25 ВодаНегазованаМиргородська1,5\r\n1.000         x          23.40 =                   23.40 А\r\nАРТ.№ 47 Напій Кока-Кола Зеро 1,75 л\r\n1.000         x          58.90 =                   58.90 А\r\nАРТ.№ 1392 Сендвіч з бужениною 210г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 107 Сендвіч з беконом та скремблом 190г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 1178 Снек Кіндер Мілк Слайс 28г\r\n2.000         x          25.90 =                   51.80 А\r\nАРТ.№ 414 Снек Кіндер Максі Кінг 35г\r\n2.000         x          44.90 =                   89.80 А\r\nАРТ.№ 87 Бісквіт молочний Барні 30г\r\n1.000         x          16.70 =                   16.70 А\r\nАРТ.№ 1393 Чай Обліпиховий Смакуйте 40г\r\n2.000         x          18.50 =                   37.00 А\r\n--------------------------------------------------------\r\nСУМА ДО СПЛАТИ:                                   437.40\r\n--------------------------------------------------------\r\nБЕЗГОТІВКОВА:                                     437.40\r\n- Плат.система: VISA\r\n- Еквайр: ПриватБанк\r\n- Термінал:                                     S1210JQD\r\n- ЕПЗ:                                  405614959XXXXXX1\r\n- Код авторизації:                                141541\r\n- Транзакція:                               111228005465\r\n- Сума:                                           437.40\r\n--------------------------------------------------------\r\nПДВ А                    20.00%                    72.90\r\n--------------------------------------------------------\r\nКасир: Каменчук Марія\r\nПанасівна|3493\r\nКаса 4940\r\nЧек 11\r\n0756437 Z 1690\r\nTS=260429221925\r\nКартка\r\nПРОГРАМА ЛОЯЛЬН\r\nОСТI\r\nНараховано бонусних гривень: 3,32\r\nДоступно бонусн\r\nих гривень: 119,9\r\nКартка: ***4995*\r\nЗАМОВЛЯЙТЕ ПРОДУКТИ\r\nНА\r\nVARUS.UA БЕЗКОШТОВНА\r\nДОСТАВКА ВІД 1699ГРН\r\n--------------------------------------------------------\r\nКонтрольне число:\r\nABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\r\n--------------------------------------------------------\r\n                  29-04-2026 22:20:06\r\n                     ФІСКАЛЬНИЙ ЧЕК\r\n                     Класичний РРО\r\n           Державна податкова служба України\r\n",
+                                                                                 "isFiscal":  true,
+                                                                                 "products":  [
+                                                                                                  {
+                                                                                                      "number":  "5",
+                                                                                                      "code":  "25",
+                                                                                                      "barcode":  "4820000431026",
+                                                                                                      "name":  "ВодаНегазованаМиргородська1,5",
+                                                                                                      "total":  23.4,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "6",
+                                                                                                      "code":  "47",
+                                                                                                      "barcode":  "5449000080806",
+                                                                                                      "name":  "Напій Кока-Кола Зеро 1,75 л",
+                                                                                                      "total":  58.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "7",
+                                                                                                      "code":  "1392",
+                                                                                                      "barcode":  "250015026841",
+                                                                                                      "name":  "Сендвіч з бужениною 210г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "8",
+                                                                                                      "code":  "107",
+                                                                                                      "barcode":  "2065509500008",
+                                                                                                      "name":  "Сендвіч з беконом та скремблом 190г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "9",
+                                                                                                      "code":  "1178",
+                                                                                                      "barcode":  "40084725",
+                                                                                                      "name":  "Снек Кіндер Мілк Слайс 28г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  25.9,
+                                                                                                      "total":  51.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "10",
+                                                                                                      "code":  "414",
+                                                                                                      "barcode":  "4008400553023",
+                                                                                                      "name":  "Снек Кіндер Максі Кінг 35г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  44.9,
+                                                                                                      "total":  89.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "11",
+                                                                                                      "code":  "87",
+                                                                                                      "barcode":  "7622300275143",
+                                                                                                      "name":  "Бісквіт молочний Барні 30г",
+                                                                                                      "total":  16.7,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "12",
+                                                                                                      "code":  "1393",
+                                                                                                      "barcode":  "4820195150306",
+                                                                                                      "name":  "Чай Обліпиховий Смакуйте 40г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  18.5,
+                                                                                                      "total":  37,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  }
+                                                                                              ],
+                                                                                 "discounts":  null,
+                                                                                 "payments":  [
+                                                                                                  {
+                                                                                                      "number":  "14",
+                                                                                                      "name":  "БЕЗГОТІВКОВА",
+                                                                                                      "paymentSystem":  "VISA",
+                                                                                                      "terminal":  "ОПЛАТА",
+                                                                                                      "card":  "S1210JQD",
+                                                                                                      "authorizationCode":  "ПриватБанк",
+                                                                                                      "transaction":  "111228005465",
+                                                                                                      "total":  437.4
+                                                                                                  }
+                                                                                              ],
+                                                                                 "taxes":  [
+                                                                                               {
+                                                                                                   "name":  "ПДВ_А",
+                                                                                                   "percent":  20,
+                                                                                                   "total":  72.9
+                                                                                               }
+                                                                                           ],
+                                                                                 "controlNumber":  "ABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=",
+                                                                                 "rawXml":  "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\u003cRQ NDv=\"DATECS FP-T88\" PrV=\"5.03\" V=\"1\"\u003e\u003cDAT DI=\"678661\" DT=\"0\" FN=\"3000909908\" TN=\"ПН 309823604614\" V=\"1\" ZN=\"СП802406529\"\u003e\u003cC AT_V=\"2\" T=\"0\"\u003e\u003cL N=\"1\"\u003eКасир: Каменчук Марія\u003c/L\u003e\u003cL N=\"2\"\u003eПанасівна|3493\u003c/L\u003e\u003cL N=\"3\"\u003eКаса 4940\u003c/L\u003e\u003cL N=\"4\"\u003eЧек 110756437 Z 1690\u003c/L\u003e\u003cP AT_TL=\"0\" C=\"25\" CD=\"4820000431026\" N=\"5\" NM=\"ВодаНегазованаМиргородська1,5\" SM=\"2340\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"47\" CD=\"5449000080806\" N=\"6\" NM=\"Напій Кока-Кола Зеро 1,75 л\" SM=\"5890\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"1392\" CD=\"250015026841\" N=\"7\" NM=\"Сендвіч з бужениною 210г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"107\" CD=\"2065509500008\" N=\"8\" NM=\"Сендвіч з беконом та скремблом 190г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1178\" CD=\"40084725\" N=\"9\" NM=\"Снек Кіндер Мілк Слайс 28г\" PRC=\"2590\" Q=\"2000\" SM=\"5180\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"414\" CD=\"4008400553023\" N=\"10\" NM=\"Снек Кіндер Максі Кінг 35г\" PRC=\"4490\" Q=\"2000\" SM=\"8980\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"87\" CD=\"7622300275143\" N=\"11\" NM=\"Бісквіт молочний Барні 30г\" SM=\"1670\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1393\" CD=\"4820195150306\" N=\"12\" NM=\"Чай Обліпиховий Смакуйте 40г\" PRC=\"1850\" Q=\"2000\" SM=\"3700\" TX=\"1\"\u003e\u003c/P\u003e\u003cL N=\"13\"\u003eTS=260429221925\u003c/L\u003e\u003cM AT_N=\"3\" AT_SING=\"0\" N=\"14\" NM=\"БЕЗГОТІВКОВА\" PA=\"ПриватБанк\" PB=\"S1210JQD\" PC=\"ОПЛАТА\" PD=\"405614959XXXXXX1\" PE=\"141541\" PF=\"0\" PSNM=\"VISA\" RRN=\"111228005465\" SM=\"43740\" T=\"1\"\u003e\u003c/M\u003e\u003cL N=\"15\"\u003eКартка\u003c/L\u003e\u003cL N=\"16\"\u003e    ПРОГРАМА ЛОЯЛЬНОСТI\u003c/L\u003e\u003cL N=\"17\"\u003eНараховано бонусних гривень: 3,32\u003c/L\u003e\u003cL N=\"18\"\u003eДоступно бонусних гривень: 119,9\u003c/L\u003e\u003cL N=\"19\"\u003eКартка: ***4995*\u003c/L\u003e\u003cL N=\"20\"\u003eЗАМОВЛЯЙТЕ ПРОДУКТИ НА\u003c/L\u003e\u003cL N=\"21\"\u003eVARUS.UA БЕЗКОШТОВНА\u003c/L\u003e\u003cL N=\"22\"\u003eДОСТАВКА ВІД 1699ГРН\u003c/L\u003e\u003cE AT_NS=\"594\" CS=\"15\" FN=\"3000909908\" N=\"23\" NO=\"696582\" SM=\"43740\" TS=\"20260429222006\"\u003e\u003cTX AT_NM=\"ПДВ_А\" AT_TL=\"0\" TX=\"1\" TXAL=\"0\" TXPR=\"20.00\" TXSM=\"7290\" TXTY=\"0\"\u003e\u003c/TX\u003e\u003c/E\u003e\u003c/C\u003e\u003cTS\u003e20260429222006\u003c/TS\u003e\u003c/DAT\u003e\u003cMAC DI=\"678661\" NT=\"3222858236\"\u003eABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\u003c/MAC\u003e\u003c/RQ\u003e",
+                                                                                 "originalApiResult":  {
+                                                                                                           "check":  "ICAgICAgICAgICAgICAgICAgICAgINCi0J7QkiAi0J7QnNCV0JPQkCINCiAgICAgICAgICAgICAgICAgICAgICAgINC80LDQs9Cw0LfQuNC9DQrQo9Ca0KDQkNCH0J3QkCwg0Jwu0JrQmNCH0JIg0JPQntCb0J7QodCG0IfQktCh0KzQmtCY0Jkg0KAt0J0sINCS0KPQmy7QktCQ0KHQmNCb0KzQmtCG0JLQodCs0JrQkCwg0JHQow0K0JQuMzQNCiAgICAgICAgICAgICAgICAgICAgICDQhtCUIDMwOTgyMzYxDQogICAgICAgICAgICAgICAgICAgINCf0J0gMzA5ODIzNjA0NjE0DQogICAgICAgICAgICAgICAgICAgICAg0JrQsNGB0L7QstC40Lkg0YfQtdC6DQogICAgICAgICAgICDQoNCg0J4g0KTQnSAzMDAwOTA5OTA4INCX0J0g0KHQnzgwMjQwNjUyOQ0KICAgICAgICAgICAgICAgICAgICAg0KfQldCaINCk0J0gNjk2NTgyDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JDQoNCiLuKEliAyNSDQktC+0LTQsNCd0LXQs9Cw0LfQvtCy0LDQvdCw0JzQuNGA0LPQvtGA0L7QtNGB0YzQutCwMSw1DQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMjMuNDAgPSAgICAgICAgICAgICAgICAgICAyMy40MCDQkA0K0JDQoNCiLuKEliA0NyDQndCw0L/RltC5INCa0L7QutCwLdCa0L7Qu9CwINCX0LXRgNC+IDEsNzUg0LsNCjEuMDAwICAgICAgICAgeCAgICAgICAgICA1OC45MCA9ICAgICAgICAgICAgICAgICAgIDU4LjkwINCQDQrQkNCg0KIu4oSWIDEzOTIg0KHQtdC90LTQstGW0Ycg0Lcg0LHRg9C20LXQvdC40L3QvtGOIDIxMNCzLCDRiNGCDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgNzkuOTAgPSAgICAgICAgICAgICAgICAgICA3OS45MCDQkA0K0JDQoNCiLuKEliAxMDcg0KHQtdC90LTQstGW0Ycg0Lcg0LHQtdC60L7QvdC+0Lwg0YLQsCDRgdC60YDQtdC80LHQu9C+0LwgMTkw0LMsINGI0YINCjEuMDAwICAgICAgICAgeCAgICAgICAgICA3OS45MCA9ICAgICAgICAgICAgICAgICAgIDc5LjkwINCQDQrQkNCg0KIu4oSWIDExNzgg0KHQvdC10Log0JrRltC90LTQtdGAINCc0ZbQu9C6INCh0LvQsNC50YEgMjjQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDI1LjkwID0gICAgICAgICAgICAgICAgICAgNTEuODAg0JANCtCQ0KDQoi7ihJYgNDE0INCh0L3QtdC6INCa0ZbQvdC00LXRgCDQnNCw0LrRgdGWINCa0ZbQvdCzIDM10LMNCjIuMDAwICAgICAgICAgeCAgICAgICAgICA0NC45MCA9ICAgICAgICAgICAgICAgICAgIDg5LjgwINCQDQrQkNCg0KIu4oSWIDg3INCR0ZbRgdC60LLRltGCINC80L7Qu9C+0YfQvdC40Lkg0JHQsNGA0L3RliAzMNCzDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMTYuNzAgPSAgICAgICAgICAgICAgICAgICAxNi43MCDQkA0K0JDQoNCiLuKEliAxMzkzINCn0LDQuSDQntCx0LvRltC/0LjRhdC+0LLQuNC5INCh0LzQsNC60YPQudGC0LUgNDDQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDE4LjUwID0gICAgICAgICAgICAgICAgICAgMzcuMDAg0JANCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQrQodCj0JzQkCDQlNCeINCh0J/Qm9CQ0KLQmDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCR0JXQl9CT0J7QotCG0JLQmtCe0JLQkDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNDM3LjQwDQotINCf0LvQsNGCLtGB0LjRgdGC0LXQvNCwOiBWSVNBDQotINCV0LrQstCw0LnRgDog0J/RgNC40LLQsNGC0JHQsNC90LoNCi0g0KLQtdGA0LzRltC90LDQuzogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUzEyMTBKUUQNCi0g0JXQn9CXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0MDU2MTQ5NTlYWFhYWFgxDQotINCa0L7QtCDQsNCy0YLQvtGA0LjQt9Cw0YbRltGXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTQxNTQxDQotINCi0YDQsNC90LfQsNC60YbRltGPOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMTEyMjgwMDU0NjUNCi0g0KHRg9C80LA6ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCf0JTQkiDQkCAgICAgICAgICAgICAgICAgICAgMjAuMDAlICAgICAgICAgICAgICAgICAgICA3Mi45MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCa0LDRgdC40YA6INCa0LDQvNC10L3Rh9GD0Log0JzQsNGA0ZbRjw0K0J/QsNC90LDRgdGW0LLQvdCwfDM0OTMNCtCa0LDRgdCwIDQ5NDANCtCn0LXQuiAxMQ0KMDc1NjQzNyBaIDE2OTANClRTPTI2MDQyOTIyMTkyNQ0K0JrQsNGA0YLQutCwDQrQn9Cg0J7Qk9Cg0JDQnNCQINCb0J7Qr9Cb0KzQnQ0K0J7QodCiSQ0K0J3QsNGA0LDRhdC+0LLQsNC90L4g0LHQvtC90YPRgdC90LjRhSDQs9GA0LjQstC10L3RjDogMywzMg0K0JTQvtGB0YLRg9C/0L3QviDQsdC+0L3Rg9GB0L0NCtC40YUg0LPRgNC40LLQtdC90Yw6IDExOSw5DQrQmtCw0YDRgtC60LA6ICoqKjQ5OTUqDQrQl9CQ0JzQntCS0JvQr9CZ0KLQlSDQn9Cg0J7QlNCj0JrQotCYDQrQndCQDQpWQVJVUy5VQSDQkdCV0JfQmtCe0KjQotCe0JLQndCQDQrQlNCe0KHQotCQ0JLQmtCQINCS0IbQlCAxNjk50JPQoNCdDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JrQvtC90YLRgNC+0LvRjNC90LUg0YfQuNGB0LvQvjoNCkFCb0FBQWRBQUFBQUFCWUFFWm5tQUFwYlVnYnpMOVBBZ2ZDNnpnWT0NCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQogICAgICAgICAgICAgICAgICAyOS0wNC0yMDI2IDIyOjIwOjA2DQogICAgICAgICAgICAgICAgICAgICDQpNCG0KHQmtCQ0JvQrNCd0JjQmSDQp9CV0JoNCiAgICAgICAgICAgICAgICAgICAgINCa0LvQsNGB0LjRh9C90LjQuSDQoNCg0J4NCiAgICAgICAgICAg0JTQtdGA0LbQsNCy0L3QsCDQv9C+0LTQsNGC0LrQvtCy0LAg0YHQu9GD0LbQsdCwINCj0LrRgNCw0ZfQvdC4DQo=",
+                                                                                                           "fn":  "3000909908",
+                                                                                                           "name":  null,
+                                                                                                           "addressGo":  null,
+                                                                                                           "typeGo":  null,
+                                                                                                           "tins":  null,
+                                                                                                           "xml":  true,
+                                                                                                           "sign":  false,
+                                                                                                           "qr":  false,
+                                                                                                           "resultCode":  null,
+                                                                                                           "resultText":  "",
+                                                                                                           "checkXml":  "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUxIj8+PFJRIE5Edj0iREFURUNTIEZQLVQ4OCIgUHJWPSI1LjAzIiBWPSIxIj48REFUIERJPSI2Nzg2NjEiIERUPSIwIiBGTj0iMzAwMDkwOTkwOCIgVE49Is/NIDMwOTgyMzYwNDYxNCIgVj0iMSIgWk49ItHPODAyNDA2NTI5Ij48QyBBVF9WPSIyIiBUPSIwIj48TCBOPSIxIj7K4PHo8DogyuDs5e338+ogzODws/88L0w+PEwgTj0iMiI+z+Dt4PGz4u3gfDM0OTM8L0w+PEwgTj0iMyI+yuDx4CA0OTQwPC9MPjxMIE49IjQiPtfl6iAxMTA3NTY0MzcgWiAxNjkwPC9MPjxQIEFUX1RMPSIwIiBDPSIyNSIgQ0Q9IjQ4MjAwMDA0MzEwMjYiIE49IjUiIE5NPSLC7uTgzeXj4Ofu4uDt4Mzo8OPu8O7k8fzq4DEsNSIgU009IjIzNDAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjQ3IiBDRD0iNTQ0OTAwMDA4MDgwNiIgTj0iNiIgTk09Is3g77PpIMru6uAtyu7r4CDH5fDuIDEsNzUg6yIgU009IjU4OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjEzOTIiIENEPSIyNTAwMTUwMjY4NDEiIE49IjciIE5NPSLR5e3k4rP3IOcg4fPm5e3o7e7+IDIxMOMsIPjyIiBTTT0iNzk5MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iMTA3IiBDRD0iMjA2NTUwOTUwMDAwOCIgTj0iOCIgTk09ItHl7eTis/cg5yDh5eru7e7sIPLgIPHq8OXs4evu7CAxOTDjLCD48iIgU009Ijc5OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iMTE3OCIgQ0Q9IjQwMDg0NzI1IiBOPSI5IiBOTT0i0e3l6iDKs+3k5fAgzLPr6iDR6+Dp8SAyOOMiIFBSQz0iMjU5MCIgUT0iMjAwMCIgU009IjUxODAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iNDE0IiBDRD0iNDAwODQwMDU1MzAyMyIgTj0iMTAiIE5NPSLR7eXqIMqz7eTl8CDM4OrxsyDKs+3jIDM14yIgUFJDPSI0NDkwIiBRPSIyMDAwIiBTTT0iODk4MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iODciIENEPSI3NjIyMzAwMjc1MTQzIiBOPSIxMSIgTk09IsGz8eris/Ig7O7r7vft6OkgweDw7bMgMzDjIiBTTT0iMTY3MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQVRfVE09IvjyIiBDPSIxMzkzIiBDRD0iNDgyMDE5NTE1MDMwNiIgTj0iMTIiIE5NPSLX4OkgzuHrs+/o9e7i6Okg0ezg6vPp8uUgNDDjIiBQUkM9IjE4NTAiIFE9IjIwMDAiIFNNPSIzNzAwIiBUWD0iMSI+PC9QPjxMIE49IjEzIj5UUz0yNjA0MjkyMjE5MjU8L0w+PE0gQVRfTj0iMyIgQVRfU0lORz0iMCIgTj0iMTQiIE5NPSLBxcfDztKywsrOwsAiIFBBPSLP8Oji4PLB4O3qIiBQQj0iUzEyMTBKUUQiIFBDPSLOz8vA0sAiIFBEPSI0MDU2MTQ5NTlYWFhYWFgxIiBQRT0iMTQxNTQxIiBQRj0iMCIgUFNOTT0iVklTQSIgUlJOPSIxMTEyMjgwMDU0NjUiIFNNPSI0Mzc0MCIgVD0iMSI+PC9NPjxMIE49IjE1Ij7K4PDy6uA8L0w+PEwgTj0iMTYiPiAgICDP0M7D0MDMwCDLzt/L3M3O0dJJPC9MPjxMIE49IjE3Ij7N4PDg9e7i4O3uIOHu7fPx7ej1IOPw6OLl7fw6IDMsMzI8L0w+PEwgTj0iMTgiPsTu8fLz7+3uIOHu7fPx7ej1IOPw6OLl7fw6IDExOSw5PC9MPjxMIE49IjE5Ij7K4PDy6uA6ICoqKjQ5OTUqPC9MPjxMIE49IjIwIj7HwMzOwsvfydLFIM/QzsTTytLIIM3APC9MPjxMIE49IjIxIj5WQVJVUy5VQSDBxcfKztjSzsLNwDwvTD48TCBOPSIyMiI+xM7R0sDCysAgwrLEIDE2OTnD0M08L0w+PEUgQVRfTlM9IjU5NCIgQ1M9IjE1IiBGTj0iMzAwMDkwOTkwOCIgTj0iMjMiIE5PPSI2OTY1ODIiIFNNPSI0Mzc0MCIgVFM9IjIwMjYwNDI5MjIyMDA2Ij48VFggQVRfTk09Is/Ewl/AIiBBVF9UTD0iMCIgVFg9IjEiIFRYQUw9IjAiIFRYUFI9IjIwLjAwIiBUWFNNPSI3MjkwIiBUWFRZPSIwIj48L1RYPjwvRT48L0M+PFRTPjIwMjYwNDI5MjIyMDA2PC9UUz48L0RBVD48TUFDIERJPSI2Nzg2NjEiIE5UPSIzMjIyODU4MjM2Ij5BQm9BQUFkQUFBQUFBQllBRVpubUFBcGJVZ2J6TDlQQWdmQzZ6Z1k9PC9NQUM+PC9SUT4=",
+                                                                                                           "checkP7s":  null
+                                                                                                       }
+                                                                             }
+                                                         }
+                                                     ]
+                                     },
+                        "error":  null,
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "fbcf21db-33f8-4913-a3c8-e531707c621c",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  3,
+                        "userId":  "single-user-3",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  56559.69,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "2793bbef-61ef-46c9-aab5-29868d93bc86",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  4,
+                        "userId":  "single-user-4",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  139078.83,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "b4739591-f784-4eee-be12-098f15e2cd67",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  5,
+                        "userId":  "single-user-5",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  245747.17,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "05fe6a64-166a-4722-aee8-4036c21343df",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  6,
+                        "userId":  "single-user-6",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  216257.41,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "af9e22a8-f1da-4668-9a92-50e397f15f1a",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  7,
+                        "userId":  "single-user-7",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  216418.55,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "a163b237-c813-4da4-ae6b-906a4ee7fd65",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  8,
+                        "userId":  "single-user-8",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  238289.88,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "d388fba6-e864-4a40-8434-bf1c13e20096",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  9,
+                        "userId":  "single-user-9",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  237389.74,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "22559a8b-dcac-4fc2-a0e4-5b27fed9659f",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  10,
+                        "userId":  "single-user-10",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  173718.56,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "71d0c4db-05ef-4c19-bc7a-878dd45c9c62",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  11,
+                        "userId":  "single-user-11",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  259149.36,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "3daa6a93-999d-433c-97fb-55b11c379dcd",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  12,
+                        "userId":  "single-user-12",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  152417.03,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "41c4297c-cfd5-4bc6-8a7a-a5b9053db281",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  13,
+                        "userId":  "single-user-13",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  258413.99,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "0cc1a4b2-ade8-4e47-a082-739151a7ab1e",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  14,
+                        "userId":  "single-user-14",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  259584.57,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "91ae8818-f3be-4dba-bbeb-284667ad9f78",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  15,
+                        "userId":  "single-user-15",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  267470.05,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "27b55d96-2964-40f5-a915-d025aee8a7db",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  16,
+                        "userId":  "single-user-16",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  67151.43,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "7ce2fe8f-50fb-4975-a53f-faa8876bbf73",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  17,
+                        "userId":  "single-user-17",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  88086.88,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "2a21e27a-19f6-4eb1-af3b-8dc62bfa5e40",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  18,
+                        "userId":  "single-user-18",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  45660.58,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "78348c1f-6ec6-411b-b9aa-a91d683da02a",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  19,
+                        "userId":  "single-user-19",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  173401.86,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "e5977718-cb12-4a85-be6f-28f567bd865b",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  20,
+                        "userId":  "single-user-20",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  130969.56,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "8ad54a44-9ea9-4dd0-a604-94e0ba10de12",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  21,
+                        "userId":  "single-user-21",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  109825.46,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "f5a74785-69a2-4ea1-b96c-8464a1909b46",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  22,
+                        "userId":  "single-user-22",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "success",
+                        "durationMs":  24576.35,
+                        "response":  {
+                                         "userId":  "single-user-22",
+                                         "count":  1,
+                                         "results":  [
+                                                         {
+                                                             "status":  "success",
+                                                             "message":  "Receipt processed successfully, but enrichment failed: receipt enrichment failed after 4 attempts: send enrichment prompt to llm: API error (status 429): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 58.118708826s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"58s\"\n      }\n    ]\n  }\n}\n",
+                                                             "receiptJson":  {
+                                                                                 "fiscalNumber":  "3000909908",
+                                                                                 "localNumber":  "696582",
+                                                                                 "total":  437.4,
+                                                                                 "dateTime":  "2026-04-29 22:20:06",
+                                                                                 "taxNumber":  "ПН 309823604614",
+                                                                                 "factoryNumber":  "СП802406529",
+                                                                                 "receiptText":  "                      ТОВ \"ОМЕГА\"\r\n                        магазин\r\nУКРАЇНА, М.КИЇВ ГОЛОСІЇВСЬКИЙ Р-Н, ВУЛ.ВАСИЛЬКІВСЬКА, БУ\r\nД.34\r\n                      ІД 30982361\r\n                    ПН 309823604614\r\n                      Касовий чек\r\n            РРО ФН 3000909908 ЗН СП802406529\r\n                     ЧЕК ФН 696582\r\n--------------------------------------------------------\r\nАРТ.№ 25 ВодаНегазованаМиргородська1,5\r\n1.000         x          23.40 =                   23.40 А\r\nАРТ.№ 47 Напій Кока-Кола Зеро 1,75 л\r\n1.000         x          58.90 =                   58.90 А\r\nАРТ.№ 1392 Сендвіч з бужениною 210г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 107 Сендвіч з беконом та скремблом 190г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 1178 Снек Кіндер Мілк Слайс 28г\r\n2.000         x          25.90 =                   51.80 А\r\nАРТ.№ 414 Снек Кіндер Максі Кінг 35г\r\n2.000         x          44.90 =                   89.80 А\r\nАРТ.№ 87 Бісквіт молочний Барні 30г\r\n1.000         x          16.70 =                   16.70 А\r\nАРТ.№ 1393 Чай Обліпиховий Смакуйте 40г\r\n2.000         x          18.50 =                   37.00 А\r\n--------------------------------------------------------\r\nСУМА ДО СПЛАТИ:                                   437.40\r\n--------------------------------------------------------\r\nБЕЗГОТІВКОВА:                                     437.40\r\n- Плат.система: VISA\r\n- Еквайр: ПриватБанк\r\n- Термінал:                                     S1210JQD\r\n- ЕПЗ:                                  405614959XXXXXX1\r\n- Код авторизації:                                141541\r\n- Транзакція:                               111228005465\r\n- Сума:                                           437.40\r\n--------------------------------------------------------\r\nПДВ А                    20.00%                    72.90\r\n--------------------------------------------------------\r\nКасир: Каменчук Марія\r\nПанасівна|3493\r\nКаса 4940\r\nЧек 11\r\n0756437 Z 1690\r\nTS=260429221925\r\nКартка\r\nПРОГРАМА ЛОЯЛЬН\r\nОСТI\r\nНараховано бонусних гривень: 3,32\r\nДоступно бонусн\r\nих гривень: 119,9\r\nКартка: ***4995*\r\nЗАМОВЛЯЙТЕ ПРОДУКТИ\r\nНА\r\nVARUS.UA БЕЗКОШТОВНА\r\nДОСТАВКА ВІД 1699ГРН\r\n--------------------------------------------------------\r\nКонтрольне число:\r\nABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\r\n--------------------------------------------------------\r\n                  29-04-2026 22:20:06\r\n                     ФІСКАЛЬНИЙ ЧЕК\r\n                     Класичний РРО\r\n           Державна податкова служба України\r\n",
+                                                                                 "isFiscal":  true,
+                                                                                 "products":  [
+                                                                                                  {
+                                                                                                      "number":  "5",
+                                                                                                      "code":  "25",
+                                                                                                      "barcode":  "4820000431026",
+                                                                                                      "name":  "ВодаНегазованаМиргородська1,5",
+                                                                                                      "total":  23.4,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "6",
+                                                                                                      "code":  "47",
+                                                                                                      "barcode":  "5449000080806",
+                                                                                                      "name":  "Напій Кока-Кола Зеро 1,75 л",
+                                                                                                      "total":  58.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "7",
+                                                                                                      "code":  "1392",
+                                                                                                      "barcode":  "250015026841",
+                                                                                                      "name":  "Сендвіч з бужениною 210г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "8",
+                                                                                                      "code":  "107",
+                                                                                                      "barcode":  "2065509500008",
+                                                                                                      "name":  "Сендвіч з беконом та скремблом 190г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "9",
+                                                                                                      "code":  "1178",
+                                                                                                      "barcode":  "40084725",
+                                                                                                      "name":  "Снек Кіндер Мілк Слайс 28г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  25.9,
+                                                                                                      "total":  51.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "10",
+                                                                                                      "code":  "414",
+                                                                                                      "barcode":  "4008400553023",
+                                                                                                      "name":  "Снек Кіндер Максі Кінг 35г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  44.9,
+                                                                                                      "total":  89.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "11",
+                                                                                                      "code":  "87",
+                                                                                                      "barcode":  "7622300275143",
+                                                                                                      "name":  "Бісквіт молочний Барні 30г",
+                                                                                                      "total":  16.7,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "12",
+                                                                                                      "code":  "1393",
+                                                                                                      "barcode":  "4820195150306",
+                                                                                                      "name":  "Чай Обліпиховий Смакуйте 40г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  18.5,
+                                                                                                      "total":  37,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  }
+                                                                                              ],
+                                                                                 "discounts":  null,
+                                                                                 "payments":  [
+                                                                                                  {
+                                                                                                      "number":  "14",
+                                                                                                      "name":  "БЕЗГОТІВКОВА",
+                                                                                                      "paymentSystem":  "VISA",
+                                                                                                      "terminal":  "ОПЛАТА",
+                                                                                                      "card":  "S1210JQD",
+                                                                                                      "authorizationCode":  "ПриватБанк",
+                                                                                                      "transaction":  "111228005465",
+                                                                                                      "total":  437.4
+                                                                                                  }
+                                                                                              ],
+                                                                                 "taxes":  [
+                                                                                               {
+                                                                                                   "name":  "ПДВ_А",
+                                                                                                   "percent":  20,
+                                                                                                   "total":  72.9
+                                                                                               }
+                                                                                           ],
+                                                                                 "controlNumber":  "ABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=",
+                                                                                 "rawXml":  "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\u003cRQ NDv=\"DATECS FP-T88\" PrV=\"5.03\" V=\"1\"\u003e\u003cDAT DI=\"678661\" DT=\"0\" FN=\"3000909908\" TN=\"ПН 309823604614\" V=\"1\" ZN=\"СП802406529\"\u003e\u003cC AT_V=\"2\" T=\"0\"\u003e\u003cL N=\"1\"\u003eКасир: Каменчук Марія\u003c/L\u003e\u003cL N=\"2\"\u003eПанасівна|3493\u003c/L\u003e\u003cL N=\"3\"\u003eКаса 4940\u003c/L\u003e\u003cL N=\"4\"\u003eЧек 110756437 Z 1690\u003c/L\u003e\u003cP AT_TL=\"0\" C=\"25\" CD=\"4820000431026\" N=\"5\" NM=\"ВодаНегазованаМиргородська1,5\" SM=\"2340\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"47\" CD=\"5449000080806\" N=\"6\" NM=\"Напій Кока-Кола Зеро 1,75 л\" SM=\"5890\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"1392\" CD=\"250015026841\" N=\"7\" NM=\"Сендвіч з бужениною 210г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"107\" CD=\"2065509500008\" N=\"8\" NM=\"Сендвіч з беконом та скремблом 190г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1178\" CD=\"40084725\" N=\"9\" NM=\"Снек Кіндер Мілк Слайс 28г\" PRC=\"2590\" Q=\"2000\" SM=\"5180\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"414\" CD=\"4008400553023\" N=\"10\" NM=\"Снек Кіндер Максі Кінг 35г\" PRC=\"4490\" Q=\"2000\" SM=\"8980\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"87\" CD=\"7622300275143\" N=\"11\" NM=\"Бісквіт молочний Барні 30г\" SM=\"1670\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1393\" CD=\"4820195150306\" N=\"12\" NM=\"Чай Обліпиховий Смакуйте 40г\" PRC=\"1850\" Q=\"2000\" SM=\"3700\" TX=\"1\"\u003e\u003c/P\u003e\u003cL N=\"13\"\u003eTS=260429221925\u003c/L\u003e\u003cM AT_N=\"3\" AT_SING=\"0\" N=\"14\" NM=\"БЕЗГОТІВКОВА\" PA=\"ПриватБанк\" PB=\"S1210JQD\" PC=\"ОПЛАТА\" PD=\"405614959XXXXXX1\" PE=\"141541\" PF=\"0\" PSNM=\"VISA\" RRN=\"111228005465\" SM=\"43740\" T=\"1\"\u003e\u003c/M\u003e\u003cL N=\"15\"\u003eКартка\u003c/L\u003e\u003cL N=\"16\"\u003e    ПРОГРАМА ЛОЯЛЬНОСТI\u003c/L\u003e\u003cL N=\"17\"\u003eНараховано бонусних гривень: 3,32\u003c/L\u003e\u003cL N=\"18\"\u003eДоступно бонусних гривень: 119,9\u003c/L\u003e\u003cL N=\"19\"\u003eКартка: ***4995*\u003c/L\u003e\u003cL N=\"20\"\u003eЗАМОВЛЯЙТЕ ПРОДУКТИ НА\u003c/L\u003e\u003cL N=\"21\"\u003eVARUS.UA БЕЗКОШТОВНА\u003c/L\u003e\u003cL N=\"22\"\u003eДОСТАВКА ВІД 1699ГРН\u003c/L\u003e\u003cE AT_NS=\"594\" CS=\"15\" FN=\"3000909908\" N=\"23\" NO=\"696582\" SM=\"43740\" TS=\"20260429222006\"\u003e\u003cTX AT_NM=\"ПДВ_А\" AT_TL=\"0\" TX=\"1\" TXAL=\"0\" TXPR=\"20.00\" TXSM=\"7290\" TXTY=\"0\"\u003e\u003c/TX\u003e\u003c/E\u003e\u003c/C\u003e\u003cTS\u003e20260429222006\u003c/TS\u003e\u003c/DAT\u003e\u003cMAC DI=\"678661\" NT=\"3222858236\"\u003eABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\u003c/MAC\u003e\u003c/RQ\u003e",
+                                                                                 "originalApiResult":  {
+                                                                                                           "check":  "ICAgICAgICAgICAgICAgICAgICAgINCi0J7QkiAi0J7QnNCV0JPQkCINCiAgICAgICAgICAgICAgICAgICAgICAgINC80LDQs9Cw0LfQuNC9DQrQo9Ca0KDQkNCH0J3QkCwg0Jwu0JrQmNCH0JIg0JPQntCb0J7QodCG0IfQktCh0KzQmtCY0Jkg0KAt0J0sINCS0KPQmy7QktCQ0KHQmNCb0KzQmtCG0JLQodCs0JrQkCwg0JHQow0K0JQuMzQNCiAgICAgICAgICAgICAgICAgICAgICDQhtCUIDMwOTgyMzYxDQogICAgICAgICAgICAgICAgICAgINCf0J0gMzA5ODIzNjA0NjE0DQogICAgICAgICAgICAgICAgICAgICAg0JrQsNGB0L7QstC40Lkg0YfQtdC6DQogICAgICAgICAgICDQoNCg0J4g0KTQnSAzMDAwOTA5OTA4INCX0J0g0KHQnzgwMjQwNjUyOQ0KICAgICAgICAgICAgICAgICAgICAg0KfQldCaINCk0J0gNjk2NTgyDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JDQoNCiLuKEliAyNSDQktC+0LTQsNCd0LXQs9Cw0LfQvtCy0LDQvdCw0JzQuNGA0LPQvtGA0L7QtNGB0YzQutCwMSw1DQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMjMuNDAgPSAgICAgICAgICAgICAgICAgICAyMy40MCDQkA0K0JDQoNCiLuKEliA0NyDQndCw0L/RltC5INCa0L7QutCwLdCa0L7Qu9CwINCX0LXRgNC+IDEsNzUg0LsNCjEuMDAwICAgICAgICAgeCAgICAgICAgICA1OC45MCA9ICAgICAgICAgICAgICAgICAgIDU4LjkwINCQDQrQkNCg0KIu4oSWIDEzOTIg0KHQtdC90LTQstGW0Ycg0Lcg0LHRg9C20LXQvdC40L3QvtGOIDIxMNCzLCDRiNGCDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgNzkuOTAgPSAgICAgICAgICAgICAgICAgICA3OS45MCDQkA0K0JDQoNCiLuKEliAxMDcg0KHQtdC90LTQstGW0Ycg0Lcg0LHQtdC60L7QvdC+0Lwg0YLQsCDRgdC60YDQtdC80LHQu9C+0LwgMTkw0LMsINGI0YINCjEuMDAwICAgICAgICAgeCAgICAgICAgICA3OS45MCA9ICAgICAgICAgICAgICAgICAgIDc5LjkwINCQDQrQkNCg0KIu4oSWIDExNzgg0KHQvdC10Log0JrRltC90LTQtdGAINCc0ZbQu9C6INCh0LvQsNC50YEgMjjQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDI1LjkwID0gICAgICAgICAgICAgICAgICAgNTEuODAg0JANCtCQ0KDQoi7ihJYgNDE0INCh0L3QtdC6INCa0ZbQvdC00LXRgCDQnNCw0LrRgdGWINCa0ZbQvdCzIDM10LMNCjIuMDAwICAgICAgICAgeCAgICAgICAgICA0NC45MCA9ICAgICAgICAgICAgICAgICAgIDg5LjgwINCQDQrQkNCg0KIu4oSWIDg3INCR0ZbRgdC60LLRltGCINC80L7Qu9C+0YfQvdC40Lkg0JHQsNGA0L3RliAzMNCzDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMTYuNzAgPSAgICAgICAgICAgICAgICAgICAxNi43MCDQkA0K0JDQoNCiLuKEliAxMzkzINCn0LDQuSDQntCx0LvRltC/0LjRhdC+0LLQuNC5INCh0LzQsNC60YPQudGC0LUgNDDQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDE4LjUwID0gICAgICAgICAgICAgICAgICAgMzcuMDAg0JANCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQrQodCj0JzQkCDQlNCeINCh0J/Qm9CQ0KLQmDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCR0JXQl9CT0J7QotCG0JLQmtCe0JLQkDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNDM3LjQwDQotINCf0LvQsNGCLtGB0LjRgdGC0LXQvNCwOiBWSVNBDQotINCV0LrQstCw0LnRgDog0J/RgNC40LLQsNGC0JHQsNC90LoNCi0g0KLQtdGA0LzRltC90LDQuzogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUzEyMTBKUUQNCi0g0JXQn9CXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0MDU2MTQ5NTlYWFhYWFgxDQotINCa0L7QtCDQsNCy0YLQvtGA0LjQt9Cw0YbRltGXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTQxNTQxDQotINCi0YDQsNC90LfQsNC60YbRltGPOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMTEyMjgwMDU0NjUNCi0g0KHRg9C80LA6ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCf0JTQkiDQkCAgICAgICAgICAgICAgICAgICAgMjAuMDAlICAgICAgICAgICAgICAgICAgICA3Mi45MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCa0LDRgdC40YA6INCa0LDQvNC10L3Rh9GD0Log0JzQsNGA0ZbRjw0K0J/QsNC90LDRgdGW0LLQvdCwfDM0OTMNCtCa0LDRgdCwIDQ5NDANCtCn0LXQuiAxMQ0KMDc1NjQzNyBaIDE2OTANClRTPTI2MDQyOTIyMTkyNQ0K0JrQsNGA0YLQutCwDQrQn9Cg0J7Qk9Cg0JDQnNCQINCb0J7Qr9Cb0KzQnQ0K0J7QodCiSQ0K0J3QsNGA0LDRhdC+0LLQsNC90L4g0LHQvtC90YPRgdC90LjRhSDQs9GA0LjQstC10L3RjDogMywzMg0K0JTQvtGB0YLRg9C/0L3QviDQsdC+0L3Rg9GB0L0NCtC40YUg0LPRgNC40LLQtdC90Yw6IDExOSw5DQrQmtCw0YDRgtC60LA6ICoqKjQ5OTUqDQrQl9CQ0JzQntCS0JvQr9CZ0KLQlSDQn9Cg0J7QlNCj0JrQotCYDQrQndCQDQpWQVJVUy5VQSDQkdCV0JfQmtCe0KjQotCe0JLQndCQDQrQlNCe0KHQotCQ0JLQmtCQINCS0IbQlCAxNjk50JPQoNCdDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JrQvtC90YLRgNC+0LvRjNC90LUg0YfQuNGB0LvQvjoNCkFCb0FBQWRBQUFBQUFCWUFFWm5tQUFwYlVnYnpMOVBBZ2ZDNnpnWT0NCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQogICAgICAgICAgICAgICAgICAyOS0wNC0yMDI2IDIyOjIwOjA2DQogICAgICAgICAgICAgICAgICAgICDQpNCG0KHQmtCQ0JvQrNCd0JjQmSDQp9CV0JoNCiAgICAgICAgICAgICAgICAgICAgINCa0LvQsNGB0LjRh9C90LjQuSDQoNCg0J4NCiAgICAgICAgICAg0JTQtdGA0LbQsNCy0L3QsCDQv9C+0LTQsNGC0LrQvtCy0LAg0YHQu9GD0LbQsdCwINCj0LrRgNCw0ZfQvdC4DQo=",
+                                                                                                           "fn":  "3000909908",
+                                                                                                           "name":  null,
+                                                                                                           "addressGo":  null,
+                                                                                                           "typeGo":  null,
+                                                                                                           "tins":  null,
+                                                                                                           "xml":  true,
+                                                                                                           "sign":  false,
+                                                                                                           "qr":  false,
+                                                                                                           "resultCode":  null,
+                                                                                                           "resultText":  "",
+                                                                                                           "checkXml":  "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUxIj8+PFJRIE5Edj0iREFURUNTIEZQLVQ4OCIgUHJWPSI1LjAzIiBWPSIxIj48REFUIERJPSI2Nzg2NjEiIERUPSIwIiBGTj0iMzAwMDkwOTkwOCIgVE49Is/NIDMwOTgyMzYwNDYxNCIgVj0iMSIgWk49ItHPODAyNDA2NTI5Ij48QyBBVF9WPSIyIiBUPSIwIj48TCBOPSIxIj7K4PHo8DogyuDs5e338+ogzODws/88L0w+PEwgTj0iMiI+z+Dt4PGz4u3gfDM0OTM8L0w+PEwgTj0iMyI+yuDx4CA0OTQwPC9MPjxMIE49IjQiPtfl6iAxMTA3NTY0MzcgWiAxNjkwPC9MPjxQIEFUX1RMPSIwIiBDPSIyNSIgQ0Q9IjQ4MjAwMDA0MzEwMjYiIE49IjUiIE5NPSLC7uTgzeXj4Ofu4uDt4Mzo8OPu8O7k8fzq4DEsNSIgU009IjIzNDAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjQ3IiBDRD0iNTQ0OTAwMDA4MDgwNiIgTj0iNiIgTk09Is3g77PpIMru6uAtyu7r4CDH5fDuIDEsNzUg6yIgU009IjU4OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjEzOTIiIENEPSIyNTAwMTUwMjY4NDEiIE49IjciIE5NPSLR5e3k4rP3IOcg4fPm5e3o7e7+IDIxMOMsIPjyIiBTTT0iNzk5MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iMTA3IiBDRD0iMjA2NTUwOTUwMDAwOCIgTj0iOCIgTk09ItHl7eTis/cg5yDh5eru7e7sIPLgIPHq8OXs4evu7CAxOTDjLCD48iIgU009Ijc5OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iMTE3OCIgQ0Q9IjQwMDg0NzI1IiBOPSI5IiBOTT0i0e3l6iDKs+3k5fAgzLPr6iDR6+Dp8SAyOOMiIFBSQz0iMjU5MCIgUT0iMjAwMCIgU009IjUxODAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iNDE0IiBDRD0iNDAwODQwMDU1MzAyMyIgTj0iMTAiIE5NPSLR7eXqIMqz7eTl8CDM4OrxsyDKs+3jIDM14yIgUFJDPSI0NDkwIiBRPSIyMDAwIiBTTT0iODk4MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iODciIENEPSI3NjIyMzAwMjc1MTQzIiBOPSIxMSIgTk09IsGz8eris/Ig7O7r7vft6OkgweDw7bMgMzDjIiBTTT0iMTY3MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQVRfVE09IvjyIiBDPSIxMzkzIiBDRD0iNDgyMDE5NTE1MDMwNiIgTj0iMTIiIE5NPSLX4OkgzuHrs+/o9e7i6Okg0ezg6vPp8uUgNDDjIiBQUkM9IjE4NTAiIFE9IjIwMDAiIFNNPSIzNzAwIiBUWD0iMSI+PC9QPjxMIE49IjEzIj5UUz0yNjA0MjkyMjE5MjU8L0w+PE0gQVRfTj0iMyIgQVRfU0lORz0iMCIgTj0iMTQiIE5NPSLBxcfDztKywsrOwsAiIFBBPSLP8Oji4PLB4O3qIiBQQj0iUzEyMTBKUUQiIFBDPSLOz8vA0sAiIFBEPSI0MDU2MTQ5NTlYWFhYWFgxIiBQRT0iMTQxNTQxIiBQRj0iMCIgUFNOTT0iVklTQSIgUlJOPSIxMTEyMjgwMDU0NjUiIFNNPSI0Mzc0MCIgVD0iMSI+PC9NPjxMIE49IjE1Ij7K4PDy6uA8L0w+PEwgTj0iMTYiPiAgICDP0M7D0MDMwCDLzt/L3M3O0dJJPC9MPjxMIE49IjE3Ij7N4PDg9e7i4O3uIOHu7fPx7ej1IOPw6OLl7fw6IDMsMzI8L0w+PEwgTj0iMTgiPsTu8fLz7+3uIOHu7fPx7ej1IOPw6OLl7fw6IDExOSw5PC9MPjxMIE49IjE5Ij7K4PDy6uA6ICoqKjQ5OTUqPC9MPjxMIE49IjIwIj7HwMzOwsvfydLFIM/QzsTTytLIIM3APC9MPjxMIE49IjIxIj5WQVJVUy5VQSDBxcfKztjSzsLNwDwvTD48TCBOPSIyMiI+xM7R0sDCysAgwrLEIDE2OTnD0M08L0w+PEUgQVRfTlM9IjU5NCIgQ1M9IjE1IiBGTj0iMzAwMDkwOTkwOCIgTj0iMjMiIE5PPSI2OTY1ODIiIFNNPSI0Mzc0MCIgVFM9IjIwMjYwNDI5MjIyMDA2Ij48VFggQVRfTk09Is/Ewl/AIiBBVF9UTD0iMCIgVFg9IjEiIFRYQUw9IjAiIFRYUFI9IjIwLjAwIiBUWFNNPSI3MjkwIiBUWFRZPSIwIj48L1RYPjwvRT48L0M+PFRTPjIwMjYwNDI5MjIyMDA2PC9UUz48L0RBVD48TUFDIERJPSI2Nzg2NjEiIE5UPSIzMjIyODU4MjM2Ij5BQm9BQUFkQUFBQUFBQllBRVpubUFBcGJVZ2J6TDlQQWdmQzZ6Z1k9PC9NQUM+PC9SUT4=",
+                                                                                                           "checkP7s":  null
+                                                                                                       }
+                                                                             }
+                                                         }
+                                                     ]
+                                     },
+                        "error":  null,
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "d7210ebb-9e94-4819-bb9b-4767ef44a8ae",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  23,
+                        "userId":  "single-user-23",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  88453.4,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "5a0d8dd1-a413-46d6-911c-f0fcac66ff0c",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  24,
+                        "userId":  "single-user-24",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  46049.87,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "a4b1ecc7-63bd-4062-a3c2-c9a9490225a5",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  25,
+                        "userId":  "single-user-25",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  66920.5,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "f5efeab4-64a6-452b-90fb-66f1400be224",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  26,
+                        "userId":  "single-user-26",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  117633.67,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "bc2ebd62-7760-402a-9323-c47574384eea",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  27,
+                        "userId":  "single-user-27",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  53493.61,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "eb87ed7d-8371-483a-8871-dd6e70d3e63d",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  28,
+                        "userId":  "single-user-28",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "success",
+                        "durationMs":  24606.91,
+                        "response":  {
+                                         "userId":  "single-user-28",
+                                         "count":  1,
+                                         "results":  [
+                                                         {
+                                                             "status":  "success",
+                                                             "message":  "Receipt processed successfully, but enrichment failed: receipt enrichment failed after 4 attempts: send enrichment prompt to llm: API error (status 429): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 58.369126886s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"58s\"\n      }\n    ]\n  }\n}\n",
+                                                             "receiptJson":  {
+                                                                                 "fiscalNumber":  "3000909908",
+                                                                                 "localNumber":  "696582",
+                                                                                 "total":  437.4,
+                                                                                 "dateTime":  "2026-04-29 22:20:06",
+                                                                                 "taxNumber":  "ПН 309823604614",
+                                                                                 "factoryNumber":  "СП802406529",
+                                                                                 "receiptText":  "                      ТОВ \"ОМЕГА\"\r\n                        магазин\r\nУКРАЇНА, М.КИЇВ ГОЛОСІЇВСЬКИЙ Р-Н, ВУЛ.ВАСИЛЬКІВСЬКА, БУ\r\nД.34\r\n                      ІД 30982361\r\n                    ПН 309823604614\r\n                      Касовий чек\r\n            РРО ФН 3000909908 ЗН СП802406529\r\n                     ЧЕК ФН 696582\r\n--------------------------------------------------------\r\nАРТ.№ 25 ВодаНегазованаМиргородська1,5\r\n1.000         x          23.40 =                   23.40 А\r\nАРТ.№ 47 Напій Кока-Кола Зеро 1,75 л\r\n1.000         x          58.90 =                   58.90 А\r\nАРТ.№ 1392 Сендвіч з бужениною 210г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 107 Сендвіч з беконом та скремблом 190г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 1178 Снек Кіндер Мілк Слайс 28г\r\n2.000         x          25.90 =                   51.80 А\r\nАРТ.№ 414 Снек Кіндер Максі Кінг 35г\r\n2.000         x          44.90 =                   89.80 А\r\nАРТ.№ 87 Бісквіт молочний Барні 30г\r\n1.000         x          16.70 =                   16.70 А\r\nАРТ.№ 1393 Чай Обліпиховий Смакуйте 40г\r\n2.000         x          18.50 =                   37.00 А\r\n--------------------------------------------------------\r\nСУМА ДО СПЛАТИ:                                   437.40\r\n--------------------------------------------------------\r\nБЕЗГОТІВКОВА:                                     437.40\r\n- Плат.система: VISA\r\n- Еквайр: ПриватБанк\r\n- Термінал:                                     S1210JQD\r\n- ЕПЗ:                                  405614959XXXXXX1\r\n- Код авторизації:                                141541\r\n- Транзакція:                               111228005465\r\n- Сума:                                           437.40\r\n--------------------------------------------------------\r\nПДВ А                    20.00%                    72.90\r\n--------------------------------------------------------\r\nКасир: Каменчук Марія\r\nПанасівна|3493\r\nКаса 4940\r\nЧек 11\r\n0756437 Z 1690\r\nTS=260429221925\r\nКартка\r\nПРОГРАМА ЛОЯЛЬН\r\nОСТI\r\nНараховано бонусних гривень: 3,32\r\nДоступно бонусн\r\nих гривень: 119,9\r\nКартка: ***4995*\r\nЗАМОВЛЯЙТЕ ПРОДУКТИ\r\nНА\r\nVARUS.UA БЕЗКОШТОВНА\r\nДОСТАВКА ВІД 1699ГРН\r\n--------------------------------------------------------\r\nКонтрольне число:\r\nABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\r\n--------------------------------------------------------\r\n                  29-04-2026 22:20:06\r\n                     ФІСКАЛЬНИЙ ЧЕК\r\n                     Класичний РРО\r\n           Державна податкова служба України\r\n",
+                                                                                 "isFiscal":  true,
+                                                                                 "products":  [
+                                                                                                  {
+                                                                                                      "number":  "5",
+                                                                                                      "code":  "25",
+                                                                                                      "barcode":  "4820000431026",
+                                                                                                      "name":  "ВодаНегазованаМиргородська1,5",
+                                                                                                      "total":  23.4,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "6",
+                                                                                                      "code":  "47",
+                                                                                                      "barcode":  "5449000080806",
+                                                                                                      "name":  "Напій Кока-Кола Зеро 1,75 л",
+                                                                                                      "total":  58.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "7",
+                                                                                                      "code":  "1392",
+                                                                                                      "barcode":  "250015026841",
+                                                                                                      "name":  "Сендвіч з бужениною 210г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "8",
+                                                                                                      "code":  "107",
+                                                                                                      "barcode":  "2065509500008",
+                                                                                                      "name":  "Сендвіч з беконом та скремблом 190г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "9",
+                                                                                                      "code":  "1178",
+                                                                                                      "barcode":  "40084725",
+                                                                                                      "name":  "Снек Кіндер Мілк Слайс 28г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  25.9,
+                                                                                                      "total":  51.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "10",
+                                                                                                      "code":  "414",
+                                                                                                      "barcode":  "4008400553023",
+                                                                                                      "name":  "Снек Кіндер Максі Кінг 35г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  44.9,
+                                                                                                      "total":  89.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "11",
+                                                                                                      "code":  "87",
+                                                                                                      "barcode":  "7622300275143",
+                                                                                                      "name":  "Бісквіт молочний Барні 30г",
+                                                                                                      "total":  16.7,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "12",
+                                                                                                      "code":  "1393",
+                                                                                                      "barcode":  "4820195150306",
+                                                                                                      "name":  "Чай Обліпиховий Смакуйте 40г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  18.5,
+                                                                                                      "total":  37,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  }
+                                                                                              ],
+                                                                                 "discounts":  null,
+                                                                                 "payments":  [
+                                                                                                  {
+                                                                                                      "number":  "14",
+                                                                                                      "name":  "БЕЗГОТІВКОВА",
+                                                                                                      "paymentSystem":  "VISA",
+                                                                                                      "terminal":  "ОПЛАТА",
+                                                                                                      "card":  "S1210JQD",
+                                                                                                      "authorizationCode":  "ПриватБанк",
+                                                                                                      "transaction":  "111228005465",
+                                                                                                      "total":  437.4
+                                                                                                  }
+                                                                                              ],
+                                                                                 "taxes":  [
+                                                                                               {
+                                                                                                   "name":  "ПДВ_А",
+                                                                                                   "percent":  20,
+                                                                                                   "total":  72.9
+                                                                                               }
+                                                                                           ],
+                                                                                 "controlNumber":  "ABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=",
+                                                                                 "rawXml":  "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\u003cRQ NDv=\"DATECS FP-T88\" PrV=\"5.03\" V=\"1\"\u003e\u003cDAT DI=\"678661\" DT=\"0\" FN=\"3000909908\" TN=\"ПН 309823604614\" V=\"1\" ZN=\"СП802406529\"\u003e\u003cC AT_V=\"2\" T=\"0\"\u003e\u003cL N=\"1\"\u003eКасир: Каменчук Марія\u003c/L\u003e\u003cL N=\"2\"\u003eПанасівна|3493\u003c/L\u003e\u003cL N=\"3\"\u003eКаса 4940\u003c/L\u003e\u003cL N=\"4\"\u003eЧек 110756437 Z 1690\u003c/L\u003e\u003cP AT_TL=\"0\" C=\"25\" CD=\"4820000431026\" N=\"5\" NM=\"ВодаНегазованаМиргородська1,5\" SM=\"2340\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"47\" CD=\"5449000080806\" N=\"6\" NM=\"Напій Кока-Кола Зеро 1,75 л\" SM=\"5890\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"1392\" CD=\"250015026841\" N=\"7\" NM=\"Сендвіч з бужениною 210г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"107\" CD=\"2065509500008\" N=\"8\" NM=\"Сендвіч з беконом та скремблом 190г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1178\" CD=\"40084725\" N=\"9\" NM=\"Снек Кіндер Мілк Слайс 28г\" PRC=\"2590\" Q=\"2000\" SM=\"5180\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"414\" CD=\"4008400553023\" N=\"10\" NM=\"Снек Кіндер Максі Кінг 35г\" PRC=\"4490\" Q=\"2000\" SM=\"8980\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"87\" CD=\"7622300275143\" N=\"11\" NM=\"Бісквіт молочний Барні 30г\" SM=\"1670\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1393\" CD=\"4820195150306\" N=\"12\" NM=\"Чай Обліпиховий Смакуйте 40г\" PRC=\"1850\" Q=\"2000\" SM=\"3700\" TX=\"1\"\u003e\u003c/P\u003e\u003cL N=\"13\"\u003eTS=260429221925\u003c/L\u003e\u003cM AT_N=\"3\" AT_SING=\"0\" N=\"14\" NM=\"БЕЗГОТІВКОВА\" PA=\"ПриватБанк\" PB=\"S1210JQD\" PC=\"ОПЛАТА\" PD=\"405614959XXXXXX1\" PE=\"141541\" PF=\"0\" PSNM=\"VISA\" RRN=\"111228005465\" SM=\"43740\" T=\"1\"\u003e\u003c/M\u003e\u003cL N=\"15\"\u003eКартка\u003c/L\u003e\u003cL N=\"16\"\u003e    ПРОГРАМА ЛОЯЛЬНОСТI\u003c/L\u003e\u003cL N=\"17\"\u003eНараховано бонусних гривень: 3,32\u003c/L\u003e\u003cL N=\"18\"\u003eДоступно бонусних гривень: 119,9\u003c/L\u003e\u003cL N=\"19\"\u003eКартка: ***4995*\u003c/L\u003e\u003cL N=\"20\"\u003eЗАМОВЛЯЙТЕ ПРОДУКТИ НА\u003c/L\u003e\u003cL N=\"21\"\u003eVARUS.UA БЕЗКОШТОВНА\u003c/L\u003e\u003cL N=\"22\"\u003eДОСТАВКА ВІД 1699ГРН\u003c/L\u003e\u003cE AT_NS=\"594\" CS=\"15\" FN=\"3000909908\" N=\"23\" NO=\"696582\" SM=\"43740\" TS=\"20260429222006\"\u003e\u003cTX AT_NM=\"ПДВ_А\" AT_TL=\"0\" TX=\"1\" TXAL=\"0\" TXPR=\"20.00\" TXSM=\"7290\" TXTY=\"0\"\u003e\u003c/TX\u003e\u003c/E\u003e\u003c/C\u003e\u003cTS\u003e20260429222006\u003c/TS\u003e\u003c/DAT\u003e\u003cMAC DI=\"678661\" NT=\"3222858236\"\u003eABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\u003c/MAC\u003e\u003c/RQ\u003e",
+                                                                                 "originalApiResult":  {
+                                                                                                           "check":  "ICAgICAgICAgICAgICAgICAgICAgINCi0J7QkiAi0J7QnNCV0JPQkCINCiAgICAgICAgICAgICAgICAgICAgICAgINC80LDQs9Cw0LfQuNC9DQrQo9Ca0KDQkNCH0J3QkCwg0Jwu0JrQmNCH0JIg0JPQntCb0J7QodCG0IfQktCh0KzQmtCY0Jkg0KAt0J0sINCS0KPQmy7QktCQ0KHQmNCb0KzQmtCG0JLQodCs0JrQkCwg0JHQow0K0JQuMzQNCiAgICAgICAgICAgICAgICAgICAgICDQhtCUIDMwOTgyMzYxDQogICAgICAgICAgICAgICAgICAgINCf0J0gMzA5ODIzNjA0NjE0DQogICAgICAgICAgICAgICAgICAgICAg0JrQsNGB0L7QstC40Lkg0YfQtdC6DQogICAgICAgICAgICDQoNCg0J4g0KTQnSAzMDAwOTA5OTA4INCX0J0g0KHQnzgwMjQwNjUyOQ0KICAgICAgICAgICAgICAgICAgICAg0KfQldCaINCk0J0gNjk2NTgyDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JDQoNCiLuKEliAyNSDQktC+0LTQsNCd0LXQs9Cw0LfQvtCy0LDQvdCw0JzQuNGA0LPQvtGA0L7QtNGB0YzQutCwMSw1DQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMjMuNDAgPSAgICAgICAgICAgICAgICAgICAyMy40MCDQkA0K0JDQoNCiLuKEliA0NyDQndCw0L/RltC5INCa0L7QutCwLdCa0L7Qu9CwINCX0LXRgNC+IDEsNzUg0LsNCjEuMDAwICAgICAgICAgeCAgICAgICAgICA1OC45MCA9ICAgICAgICAgICAgICAgICAgIDU4LjkwINCQDQrQkNCg0KIu4oSWIDEzOTIg0KHQtdC90LTQstGW0Ycg0Lcg0LHRg9C20LXQvdC40L3QvtGOIDIxMNCzLCDRiNGCDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgNzkuOTAgPSAgICAgICAgICAgICAgICAgICA3OS45MCDQkA0K0JDQoNCiLuKEliAxMDcg0KHQtdC90LTQstGW0Ycg0Lcg0LHQtdC60L7QvdC+0Lwg0YLQsCDRgdC60YDQtdC80LHQu9C+0LwgMTkw0LMsINGI0YINCjEuMDAwICAgICAgICAgeCAgICAgICAgICA3OS45MCA9ICAgICAgICAgICAgICAgICAgIDc5LjkwINCQDQrQkNCg0KIu4oSWIDExNzgg0KHQvdC10Log0JrRltC90LTQtdGAINCc0ZbQu9C6INCh0LvQsNC50YEgMjjQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDI1LjkwID0gICAgICAgICAgICAgICAgICAgNTEuODAg0JANCtCQ0KDQoi7ihJYgNDE0INCh0L3QtdC6INCa0ZbQvdC00LXRgCDQnNCw0LrRgdGWINCa0ZbQvdCzIDM10LMNCjIuMDAwICAgICAgICAgeCAgICAgICAgICA0NC45MCA9ICAgICAgICAgICAgICAgICAgIDg5LjgwINCQDQrQkNCg0KIu4oSWIDg3INCR0ZbRgdC60LLRltGCINC80L7Qu9C+0YfQvdC40Lkg0JHQsNGA0L3RliAzMNCzDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMTYuNzAgPSAgICAgICAgICAgICAgICAgICAxNi43MCDQkA0K0JDQoNCiLuKEliAxMzkzINCn0LDQuSDQntCx0LvRltC/0LjRhdC+0LLQuNC5INCh0LzQsNC60YPQudGC0LUgNDDQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDE4LjUwID0gICAgICAgICAgICAgICAgICAgMzcuMDAg0JANCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQrQodCj0JzQkCDQlNCeINCh0J/Qm9CQ0KLQmDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCR0JXQl9CT0J7QotCG0JLQmtCe0JLQkDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNDM3LjQwDQotINCf0LvQsNGCLtGB0LjRgdGC0LXQvNCwOiBWSVNBDQotINCV0LrQstCw0LnRgDog0J/RgNC40LLQsNGC0JHQsNC90LoNCi0g0KLQtdGA0LzRltC90LDQuzogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUzEyMTBKUUQNCi0g0JXQn9CXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0MDU2MTQ5NTlYWFhYWFgxDQotINCa0L7QtCDQsNCy0YLQvtGA0LjQt9Cw0YbRltGXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTQxNTQxDQotINCi0YDQsNC90LfQsNC60YbRltGPOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMTEyMjgwMDU0NjUNCi0g0KHRg9C80LA6ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCf0JTQkiDQkCAgICAgICAgICAgICAgICAgICAgMjAuMDAlICAgICAgICAgICAgICAgICAgICA3Mi45MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCa0LDRgdC40YA6INCa0LDQvNC10L3Rh9GD0Log0JzQsNGA0ZbRjw0K0J/QsNC90LDRgdGW0LLQvdCwfDM0OTMNCtCa0LDRgdCwIDQ5NDANCtCn0LXQuiAxMQ0KMDc1NjQzNyBaIDE2OTANClRTPTI2MDQyOTIyMTkyNQ0K0JrQsNGA0YLQutCwDQrQn9Cg0J7Qk9Cg0JDQnNCQINCb0J7Qr9Cb0KzQnQ0K0J7QodCiSQ0K0J3QsNGA0LDRhdC+0LLQsNC90L4g0LHQvtC90YPRgdC90LjRhSDQs9GA0LjQstC10L3RjDogMywzMg0K0JTQvtGB0YLRg9C/0L3QviDQsdC+0L3Rg9GB0L0NCtC40YUg0LPRgNC40LLQtdC90Yw6IDExOSw5DQrQmtCw0YDRgtC60LA6ICoqKjQ5OTUqDQrQl9CQ0JzQntCS0JvQr9CZ0KLQlSDQn9Cg0J7QlNCj0JrQotCYDQrQndCQDQpWQVJVUy5VQSDQkdCV0JfQmtCe0KjQotCe0JLQndCQDQrQlNCe0KHQotCQ0JLQmtCQINCS0IbQlCAxNjk50JPQoNCdDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JrQvtC90YLRgNC+0LvRjNC90LUg0YfQuNGB0LvQvjoNCkFCb0FBQWRBQUFBQUFCWUFFWm5tQUFwYlVnYnpMOVBBZ2ZDNnpnWT0NCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQogICAgICAgICAgICAgICAgICAyOS0wNC0yMDI2IDIyOjIwOjA2DQogICAgICAgICAgICAgICAgICAgICDQpNCG0KHQmtCQ0JvQrNCd0JjQmSDQp9CV0JoNCiAgICAgICAgICAgICAgICAgICAgINCa0LvQsNGB0LjRh9C90LjQuSDQoNCg0J4NCiAgICAgICAgICAg0JTQtdGA0LbQsNCy0L3QsCDQv9C+0LTQsNGC0LrQvtCy0LAg0YHQu9GD0LbQsdCwINCj0LrRgNCw0ZfQvdC4DQo=",
+                                                                                                           "fn":  "3000909908",
+                                                                                                           "name":  null,
+                                                                                                           "addressGo":  null,
+                                                                                                           "typeGo":  null,
+                                                                                                           "tins":  null,
+                                                                                                           "xml":  true,
+                                                                                                           "sign":  false,
+                                                                                                           "qr":  false,
+                                                                                                           "resultCode":  null,
+                                                                                                           "resultText":  "",
+                                                                                                           "checkXml":  "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUxIj8+PFJRIE5Edj0iREFURUNTIEZQLVQ4OCIgUHJWPSI1LjAzIiBWPSIxIj48REFUIERJPSI2Nzg2NjEiIERUPSIwIiBGTj0iMzAwMDkwOTkwOCIgVE49Is/NIDMwOTgyMzYwNDYxNCIgVj0iMSIgWk49ItHPODAyNDA2NTI5Ij48QyBBVF9WPSIyIiBUPSIwIj48TCBOPSIxIj7K4PHo8DogyuDs5e338+ogzODws/88L0w+PEwgTj0iMiI+z+Dt4PGz4u3gfDM0OTM8L0w+PEwgTj0iMyI+yuDx4CA0OTQwPC9MPjxMIE49IjQiPtfl6iAxMTA3NTY0MzcgWiAxNjkwPC9MPjxQIEFUX1RMPSIwIiBDPSIyNSIgQ0Q9IjQ4MjAwMDA0MzEwMjYiIE49IjUiIE5NPSLC7uTgzeXj4Ofu4uDt4Mzo8OPu8O7k8fzq4DEsNSIgU009IjIzNDAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjQ3IiBDRD0iNTQ0OTAwMDA4MDgwNiIgTj0iNiIgTk09Is3g77PpIMru6uAtyu7r4CDH5fDuIDEsNzUg6yIgU009IjU4OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjEzOTIiIENEPSIyNTAwMTUwMjY4NDEiIE49IjciIE5NPSLR5e3k4rP3IOcg4fPm5e3o7e7+IDIxMOMsIPjyIiBTTT0iNzk5MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iMTA3IiBDRD0iMjA2NTUwOTUwMDAwOCIgTj0iOCIgTk09ItHl7eTis/cg5yDh5eru7e7sIPLgIPHq8OXs4evu7CAxOTDjLCD48iIgU009Ijc5OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iMTE3OCIgQ0Q9IjQwMDg0NzI1IiBOPSI5IiBOTT0i0e3l6iDKs+3k5fAgzLPr6iDR6+Dp8SAyOOMiIFBSQz0iMjU5MCIgUT0iMjAwMCIgU009IjUxODAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iNDE0IiBDRD0iNDAwODQwMDU1MzAyMyIgTj0iMTAiIE5NPSLR7eXqIMqz7eTl8CDM4OrxsyDKs+3jIDM14yIgUFJDPSI0NDkwIiBRPSIyMDAwIiBTTT0iODk4MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iODciIENEPSI3NjIyMzAwMjc1MTQzIiBOPSIxMSIgTk09IsGz8eris/Ig7O7r7vft6OkgweDw7bMgMzDjIiBTTT0iMTY3MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQVRfVE09IvjyIiBDPSIxMzkzIiBDRD0iNDgyMDE5NTE1MDMwNiIgTj0iMTIiIE5NPSLX4OkgzuHrs+/o9e7i6Okg0ezg6vPp8uUgNDDjIiBQUkM9IjE4NTAiIFE9IjIwMDAiIFNNPSIzNzAwIiBUWD0iMSI+PC9QPjxMIE49IjEzIj5UUz0yNjA0MjkyMjE5MjU8L0w+PE0gQVRfTj0iMyIgQVRfU0lORz0iMCIgTj0iMTQiIE5NPSLBxcfDztKywsrOwsAiIFBBPSLP8Oji4PLB4O3qIiBQQj0iUzEyMTBKUUQiIFBDPSLOz8vA0sAiIFBEPSI0MDU2MTQ5NTlYWFhYWFgxIiBQRT0iMTQxNTQxIiBQRj0iMCIgUFNOTT0iVklTQSIgUlJOPSIxMTEyMjgwMDU0NjUiIFNNPSI0Mzc0MCIgVD0iMSI+PC9NPjxMIE49IjE1Ij7K4PDy6uA8L0w+PEwgTj0iMTYiPiAgICDP0M7D0MDMwCDLzt/L3M3O0dJJPC9MPjxMIE49IjE3Ij7N4PDg9e7i4O3uIOHu7fPx7ej1IOPw6OLl7fw6IDMsMzI8L0w+PEwgTj0iMTgiPsTu8fLz7+3uIOHu7fPx7ej1IOPw6OLl7fw6IDExOSw5PC9MPjxMIE49IjE5Ij7K4PDy6uA6ICoqKjQ5OTUqPC9MPjxMIE49IjIwIj7HwMzOwsvfydLFIM/QzsTTytLIIM3APC9MPjxMIE49IjIxIj5WQVJVUy5VQSDBxcfKztjSzsLNwDwvTD48TCBOPSIyMiI+xM7R0sDCysAgwrLEIDE2OTnD0M08L0w+PEUgQVRfTlM9IjU5NCIgQ1M9IjE1IiBGTj0iMzAwMDkwOTkwOCIgTj0iMjMiIE5PPSI2OTY1ODIiIFNNPSI0Mzc0MCIgVFM9IjIwMjYwNDI5MjIyMDA2Ij48VFggQVRfTk09Is/Ewl/AIiBBVF9UTD0iMCIgVFg9IjEiIFRYQUw9IjAiIFRYUFI9IjIwLjAwIiBUWFNNPSI3MjkwIiBUWFRZPSIwIj48L1RYPjwvRT48L0M+PFRTPjIwMjYwNDI5MjIyMDA2PC9UUz48L0RBVD48TUFDIERJPSI2Nzg2NjEiIE5UPSIzMjIyODU4MjM2Ij5BQm9BQUFkQUFBQUFBQllBRVpubUFBcGJVZ2J6TDlQQWdmQzZ6Z1k9PC9NQUM+PC9SUT4=",
+                                                                                                           "checkP7s":  null
+                                                                                                       }
+                                                                             }
+                                                         }
+                                                     ]
+                                     },
+                        "error":  null,
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "d61f29a6-395b-4335-acc4-d6748581c757",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  29,
+                        "userId":  "single-user-29",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "success",
+                        "durationMs":  24698.08,
+                        "response":  {
+                                         "userId":  "single-user-29",
+                                         "count":  1,
+                                         "results":  [
+                                                         {
+                                                             "status":  "success",
+                                                             "message":  "Receipt processed successfully, but enrichment failed: receipt enrichment failed after 4 attempts: send enrichment prompt to llm: API error (status 429): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 57.991800964s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-2.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"57s\"\n      }\n    ]\n  }\n}\n",
+                                                             "receiptJson":  {
+                                                                                 "fiscalNumber":  "3000909908",
+                                                                                 "localNumber":  "696582",
+                                                                                 "total":  437.4,
+                                                                                 "dateTime":  "2026-04-29 22:20:06",
+                                                                                 "taxNumber":  "ПН 309823604614",
+                                                                                 "factoryNumber":  "СП802406529",
+                                                                                 "receiptText":  "                      ТОВ \"ОМЕГА\"\r\n                        магазин\r\nУКРАЇНА, М.КИЇВ ГОЛОСІЇВСЬКИЙ Р-Н, ВУЛ.ВАСИЛЬКІВСЬКА, БУ\r\nД.34\r\n                      ІД 30982361\r\n                    ПН 309823604614\r\n                      Касовий чек\r\n            РРО ФН 3000909908 ЗН СП802406529\r\n                     ЧЕК ФН 696582\r\n--------------------------------------------------------\r\nАРТ.№ 25 ВодаНегазованаМиргородська1,5\r\n1.000         x          23.40 =                   23.40 А\r\nАРТ.№ 47 Напій Кока-Кола Зеро 1,75 л\r\n1.000         x          58.90 =                   58.90 А\r\nАРТ.№ 1392 Сендвіч з бужениною 210г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 107 Сендвіч з беконом та скремблом 190г, шт\r\n1.000         x          79.90 =                   79.90 А\r\nАРТ.№ 1178 Снек Кіндер Мілк Слайс 28г\r\n2.000         x          25.90 =                   51.80 А\r\nАРТ.№ 414 Снек Кіндер Максі Кінг 35г\r\n2.000         x          44.90 =                   89.80 А\r\nАРТ.№ 87 Бісквіт молочний Барні 30г\r\n1.000         x          16.70 =                   16.70 А\r\nАРТ.№ 1393 Чай Обліпиховий Смакуйте 40г\r\n2.000         x          18.50 =                   37.00 А\r\n--------------------------------------------------------\r\nСУМА ДО СПЛАТИ:                                   437.40\r\n--------------------------------------------------------\r\nБЕЗГОТІВКОВА:                                     437.40\r\n- Плат.система: VISA\r\n- Еквайр: ПриватБанк\r\n- Термінал:                                     S1210JQD\r\n- ЕПЗ:                                  405614959XXXXXX1\r\n- Код авторизації:                                141541\r\n- Транзакція:                               111228005465\r\n- Сума:                                           437.40\r\n--------------------------------------------------------\r\nПДВ А                    20.00%                    72.90\r\n--------------------------------------------------------\r\nКасир: Каменчук Марія\r\nПанасівна|3493\r\nКаса 4940\r\nЧек 11\r\n0756437 Z 1690\r\nTS=260429221925\r\nКартка\r\nПРОГРАМА ЛОЯЛЬН\r\nОСТI\r\nНараховано бонусних гривень: 3,32\r\nДоступно бонусн\r\nих гривень: 119,9\r\nКартка: ***4995*\r\nЗАМОВЛЯЙТЕ ПРОДУКТИ\r\nНА\r\nVARUS.UA БЕЗКОШТОВНА\r\nДОСТАВКА ВІД 1699ГРН\r\n--------------------------------------------------------\r\nКонтрольне число:\r\nABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\r\n--------------------------------------------------------\r\n                  29-04-2026 22:20:06\r\n                     ФІСКАЛЬНИЙ ЧЕК\r\n                     Класичний РРО\r\n           Державна податкова служба України\r\n",
+                                                                                 "isFiscal":  true,
+                                                                                 "products":  [
+                                                                                                  {
+                                                                                                      "number":  "5",
+                                                                                                      "code":  "25",
+                                                                                                      "barcode":  "4820000431026",
+                                                                                                      "name":  "ВодаНегазованаМиргородська1,5",
+                                                                                                      "total":  23.4,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "6",
+                                                                                                      "code":  "47",
+                                                                                                      "barcode":  "5449000080806",
+                                                                                                      "name":  "Напій Кока-Кола Зеро 1,75 л",
+                                                                                                      "total":  58.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "7",
+                                                                                                      "code":  "1392",
+                                                                                                      "barcode":  "250015026841",
+                                                                                                      "name":  "Сендвіч з бужениною 210г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "8",
+                                                                                                      "code":  "107",
+                                                                                                      "barcode":  "2065509500008",
+                                                                                                      "name":  "Сендвіч з беконом та скремблом 190г, шт",
+                                                                                                      "total":  79.9,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "9",
+                                                                                                      "code":  "1178",
+                                                                                                      "barcode":  "40084725",
+                                                                                                      "name":  "Снек Кіндер Мілк Слайс 28г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  25.9,
+                                                                                                      "total":  51.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "10",
+                                                                                                      "code":  "414",
+                                                                                                      "barcode":  "4008400553023",
+                                                                                                      "name":  "Снек Кіндер Максі Кінг 35г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  44.9,
+                                                                                                      "total":  89.8,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "11",
+                                                                                                      "code":  "87",
+                                                                                                      "barcode":  "7622300275143",
+                                                                                                      "name":  "Бісквіт молочний Барні 30г",
+                                                                                                      "total":  16.7,
+                                                                                                      "taxGroup":  "1"
+                                                                                                  },
+                                                                                                  {
+                                                                                                      "number":  "12",
+                                                                                                      "code":  "1393",
+                                                                                                      "barcode":  "4820195150306",
+                                                                                                      "name":  "Чай Обліпиховий Смакуйте 40г",
+                                                                                                      "quantity":  2,
+                                                                                                      "price":  18.5,
+                                                                                                      "total":  37,
+                                                                                                      "taxGroup":  "1",
+                                                                                                      "measureUnit":  "шт"
+                                                                                                  }
+                                                                                              ],
+                                                                                 "discounts":  null,
+                                                                                 "payments":  [
+                                                                                                  {
+                                                                                                      "number":  "14",
+                                                                                                      "name":  "БЕЗГОТІВКОВА",
+                                                                                                      "paymentSystem":  "VISA",
+                                                                                                      "terminal":  "ОПЛАТА",
+                                                                                                      "card":  "S1210JQD",
+                                                                                                      "authorizationCode":  "ПриватБанк",
+                                                                                                      "transaction":  "111228005465",
+                                                                                                      "total":  437.4
+                                                                                                  }
+                                                                                              ],
+                                                                                 "taxes":  [
+                                                                                               {
+                                                                                                   "name":  "ПДВ_А",
+                                                                                                   "percent":  20,
+                                                                                                   "total":  72.9
+                                                                                               }
+                                                                                           ],
+                                                                                 "controlNumber":  "ABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=",
+                                                                                 "rawXml":  "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\u003cRQ NDv=\"DATECS FP-T88\" PrV=\"5.03\" V=\"1\"\u003e\u003cDAT DI=\"678661\" DT=\"0\" FN=\"3000909908\" TN=\"ПН 309823604614\" V=\"1\" ZN=\"СП802406529\"\u003e\u003cC AT_V=\"2\" T=\"0\"\u003e\u003cL N=\"1\"\u003eКасир: Каменчук Марія\u003c/L\u003e\u003cL N=\"2\"\u003eПанасівна|3493\u003c/L\u003e\u003cL N=\"3\"\u003eКаса 4940\u003c/L\u003e\u003cL N=\"4\"\u003eЧек 110756437 Z 1690\u003c/L\u003e\u003cP AT_TL=\"0\" C=\"25\" CD=\"4820000431026\" N=\"5\" NM=\"ВодаНегазованаМиргородська1,5\" SM=\"2340\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"47\" CD=\"5449000080806\" N=\"6\" NM=\"Напій Кока-Кола Зеро 1,75 л\" SM=\"5890\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"1392\" CD=\"250015026841\" N=\"7\" NM=\"Сендвіч з бужениною 210г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"107\" CD=\"2065509500008\" N=\"8\" NM=\"Сендвіч з беконом та скремблом 190г, шт\" SM=\"7990\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1178\" CD=\"40084725\" N=\"9\" NM=\"Снек Кіндер Мілк Слайс 28г\" PRC=\"2590\" Q=\"2000\" SM=\"5180\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"414\" CD=\"4008400553023\" N=\"10\" NM=\"Снек Кіндер Максі Кінг 35г\" PRC=\"4490\" Q=\"2000\" SM=\"8980\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" C=\"87\" CD=\"7622300275143\" N=\"11\" NM=\"Бісквіт молочний Барні 30г\" SM=\"1670\" TX=\"1\"\u003e\u003c/P\u003e\u003cP AT_TL=\"0\" AT_TM=\"шт\" C=\"1393\" CD=\"4820195150306\" N=\"12\" NM=\"Чай Обліпиховий Смакуйте 40г\" PRC=\"1850\" Q=\"2000\" SM=\"3700\" TX=\"1\"\u003e\u003c/P\u003e\u003cL N=\"13\"\u003eTS=260429221925\u003c/L\u003e\u003cM AT_N=\"3\" AT_SING=\"0\" N=\"14\" NM=\"БЕЗГОТІВКОВА\" PA=\"ПриватБанк\" PB=\"S1210JQD\" PC=\"ОПЛАТА\" PD=\"405614959XXXXXX1\" PE=\"141541\" PF=\"0\" PSNM=\"VISA\" RRN=\"111228005465\" SM=\"43740\" T=\"1\"\u003e\u003c/M\u003e\u003cL N=\"15\"\u003eКартка\u003c/L\u003e\u003cL N=\"16\"\u003e    ПРОГРАМА ЛОЯЛЬНОСТI\u003c/L\u003e\u003cL N=\"17\"\u003eНараховано бонусних гривень: 3,32\u003c/L\u003e\u003cL N=\"18\"\u003eДоступно бонусних гривень: 119,9\u003c/L\u003e\u003cL N=\"19\"\u003eКартка: ***4995*\u003c/L\u003e\u003cL N=\"20\"\u003eЗАМОВЛЯЙТЕ ПРОДУКТИ НА\u003c/L\u003e\u003cL N=\"21\"\u003eVARUS.UA БЕЗКОШТОВНА\u003c/L\u003e\u003cL N=\"22\"\u003eДОСТАВКА ВІД 1699ГРН\u003c/L\u003e\u003cE AT_NS=\"594\" CS=\"15\" FN=\"3000909908\" N=\"23\" NO=\"696582\" SM=\"43740\" TS=\"20260429222006\"\u003e\u003cTX AT_NM=\"ПДВ_А\" AT_TL=\"0\" TX=\"1\" TXAL=\"0\" TXPR=\"20.00\" TXSM=\"7290\" TXTY=\"0\"\u003e\u003c/TX\u003e\u003c/E\u003e\u003c/C\u003e\u003cTS\u003e20260429222006\u003c/TS\u003e\u003c/DAT\u003e\u003cMAC DI=\"678661\" NT=\"3222858236\"\u003eABoAAAdAAAAAABYAEZnmAApbUgbzL9PAgfC6zgY=\u003c/MAC\u003e\u003c/RQ\u003e",
+                                                                                 "originalApiResult":  {
+                                                                                                           "check":  "ICAgICAgICAgICAgICAgICAgICAgINCi0J7QkiAi0J7QnNCV0JPQkCINCiAgICAgICAgICAgICAgICAgICAgICAgINC80LDQs9Cw0LfQuNC9DQrQo9Ca0KDQkNCH0J3QkCwg0Jwu0JrQmNCH0JIg0JPQntCb0J7QodCG0IfQktCh0KzQmtCY0Jkg0KAt0J0sINCS0KPQmy7QktCQ0KHQmNCb0KzQmtCG0JLQodCs0JrQkCwg0JHQow0K0JQuMzQNCiAgICAgICAgICAgICAgICAgICAgICDQhtCUIDMwOTgyMzYxDQogICAgICAgICAgICAgICAgICAgINCf0J0gMzA5ODIzNjA0NjE0DQogICAgICAgICAgICAgICAgICAgICAg0JrQsNGB0L7QstC40Lkg0YfQtdC6DQogICAgICAgICAgICDQoNCg0J4g0KTQnSAzMDAwOTA5OTA4INCX0J0g0KHQnzgwMjQwNjUyOQ0KICAgICAgICAgICAgICAgICAgICAg0KfQldCaINCk0J0gNjk2NTgyDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JDQoNCiLuKEliAyNSDQktC+0LTQsNCd0LXQs9Cw0LfQvtCy0LDQvdCw0JzQuNGA0LPQvtGA0L7QtNGB0YzQutCwMSw1DQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMjMuNDAgPSAgICAgICAgICAgICAgICAgICAyMy40MCDQkA0K0JDQoNCiLuKEliA0NyDQndCw0L/RltC5INCa0L7QutCwLdCa0L7Qu9CwINCX0LXRgNC+IDEsNzUg0LsNCjEuMDAwICAgICAgICAgeCAgICAgICAgICA1OC45MCA9ICAgICAgICAgICAgICAgICAgIDU4LjkwINCQDQrQkNCg0KIu4oSWIDEzOTIg0KHQtdC90LTQstGW0Ycg0Lcg0LHRg9C20LXQvdC40L3QvtGOIDIxMNCzLCDRiNGCDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgNzkuOTAgPSAgICAgICAgICAgICAgICAgICA3OS45MCDQkA0K0JDQoNCiLuKEliAxMDcg0KHQtdC90LTQstGW0Ycg0Lcg0LHQtdC60L7QvdC+0Lwg0YLQsCDRgdC60YDQtdC80LHQu9C+0LwgMTkw0LMsINGI0YINCjEuMDAwICAgICAgICAgeCAgICAgICAgICA3OS45MCA9ICAgICAgICAgICAgICAgICAgIDc5LjkwINCQDQrQkNCg0KIu4oSWIDExNzgg0KHQvdC10Log0JrRltC90LTQtdGAINCc0ZbQu9C6INCh0LvQsNC50YEgMjjQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDI1LjkwID0gICAgICAgICAgICAgICAgICAgNTEuODAg0JANCtCQ0KDQoi7ihJYgNDE0INCh0L3QtdC6INCa0ZbQvdC00LXRgCDQnNCw0LrRgdGWINCa0ZbQvdCzIDM10LMNCjIuMDAwICAgICAgICAgeCAgICAgICAgICA0NC45MCA9ICAgICAgICAgICAgICAgICAgIDg5LjgwINCQDQrQkNCg0KIu4oSWIDg3INCR0ZbRgdC60LLRltGCINC80L7Qu9C+0YfQvdC40Lkg0JHQsNGA0L3RliAzMNCzDQoxLjAwMCAgICAgICAgIHggICAgICAgICAgMTYuNzAgPSAgICAgICAgICAgICAgICAgICAxNi43MCDQkA0K0JDQoNCiLuKEliAxMzkzINCn0LDQuSDQntCx0LvRltC/0LjRhdC+0LLQuNC5INCh0LzQsNC60YPQudGC0LUgNDDQsw0KMi4wMDAgICAgICAgICB4ICAgICAgICAgIDE4LjUwID0gICAgICAgICAgICAgICAgICAgMzcuMDAg0JANCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQrQodCj0JzQkCDQlNCeINCh0J/Qm9CQ0KLQmDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCR0JXQl9CT0J7QotCG0JLQmtCe0JLQkDogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNDM3LjQwDQotINCf0LvQsNGCLtGB0LjRgdGC0LXQvNCwOiBWSVNBDQotINCV0LrQstCw0LnRgDog0J/RgNC40LLQsNGC0JHQsNC90LoNCi0g0KLQtdGA0LzRltC90LDQuzogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUzEyMTBKUUQNCi0g0JXQn9CXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0MDU2MTQ5NTlYWFhYWFgxDQotINCa0L7QtCDQsNCy0YLQvtGA0LjQt9Cw0YbRltGXOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTQxNTQxDQotINCi0YDQsNC90LfQsNC60YbRltGPOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMTEyMjgwMDU0NjUNCi0g0KHRg9C80LA6ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQzNy40MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCf0JTQkiDQkCAgICAgICAgICAgICAgICAgICAgMjAuMDAlICAgICAgICAgICAgICAgICAgICA3Mi45MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCtCa0LDRgdC40YA6INCa0LDQvNC10L3Rh9GD0Log0JzQsNGA0ZbRjw0K0J/QsNC90LDRgdGW0LLQvdCwfDM0OTMNCtCa0LDRgdCwIDQ5NDANCtCn0LXQuiAxMQ0KMDc1NjQzNyBaIDE2OTANClRTPTI2MDQyOTIyMTkyNQ0K0JrQsNGA0YLQutCwDQrQn9Cg0J7Qk9Cg0JDQnNCQINCb0J7Qr9Cb0KzQnQ0K0J7QodCiSQ0K0J3QsNGA0LDRhdC+0LLQsNC90L4g0LHQvtC90YPRgdC90LjRhSDQs9GA0LjQstC10L3RjDogMywzMg0K0JTQvtGB0YLRg9C/0L3QviDQsdC+0L3Rg9GB0L0NCtC40YUg0LPRgNC40LLQtdC90Yw6IDExOSw5DQrQmtCw0YDRgtC60LA6ICoqKjQ5OTUqDQrQl9CQ0JzQntCS0JvQr9CZ0KLQlSDQn9Cg0J7QlNCj0JrQotCYDQrQndCQDQpWQVJVUy5VQSDQkdCV0JfQmtCe0KjQotCe0JLQndCQDQrQlNCe0KHQotCQ0JLQmtCQINCS0IbQlCAxNjk50JPQoNCdDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0K0JrQvtC90YLRgNC+0LvRjNC90LUg0YfQuNGB0LvQvjoNCkFCb0FBQWRBQUFBQUFCWUFFWm5tQUFwYlVnYnpMOVBBZ2ZDNnpnWT0NCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQogICAgICAgICAgICAgICAgICAyOS0wNC0yMDI2IDIyOjIwOjA2DQogICAgICAgICAgICAgICAgICAgICDQpNCG0KHQmtCQ0JvQrNCd0JjQmSDQp9CV0JoNCiAgICAgICAgICAgICAgICAgICAgINCa0LvQsNGB0LjRh9C90LjQuSDQoNCg0J4NCiAgICAgICAgICAg0JTQtdGA0LbQsNCy0L3QsCDQv9C+0LTQsNGC0LrQvtCy0LAg0YHQu9GD0LbQsdCwINCj0LrRgNCw0ZfQvdC4DQo=",
+                                                                                                           "fn":  "3000909908",
+                                                                                                           "name":  null,
+                                                                                                           "addressGo":  null,
+                                                                                                           "typeGo":  null,
+                                                                                                           "tins":  null,
+                                                                                                           "xml":  true,
+                                                                                                           "sign":  false,
+                                                                                                           "qr":  false,
+                                                                                                           "resultCode":  null,
+                                                                                                           "resultText":  "",
+                                                                                                           "checkXml":  "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUxIj8+PFJRIE5Edj0iREFURUNTIEZQLVQ4OCIgUHJWPSI1LjAzIiBWPSIxIj48REFUIERJPSI2Nzg2NjEiIERUPSIwIiBGTj0iMzAwMDkwOTkwOCIgVE49Is/NIDMwOTgyMzYwNDYxNCIgVj0iMSIgWk49ItHPODAyNDA2NTI5Ij48QyBBVF9WPSIyIiBUPSIwIj48TCBOPSIxIj7K4PHo8DogyuDs5e338+ogzODws/88L0w+PEwgTj0iMiI+z+Dt4PGz4u3gfDM0OTM8L0w+PEwgTj0iMyI+yuDx4CA0OTQwPC9MPjxMIE49IjQiPtfl6iAxMTA3NTY0MzcgWiAxNjkwPC9MPjxQIEFUX1RMPSIwIiBDPSIyNSIgQ0Q9IjQ4MjAwMDA0MzEwMjYiIE49IjUiIE5NPSLC7uTgzeXj4Ofu4uDt4Mzo8OPu8O7k8fzq4DEsNSIgU009IjIzNDAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjQ3IiBDRD0iNTQ0OTAwMDA4MDgwNiIgTj0iNiIgTk09Is3g77PpIMru6uAtyu7r4CDH5fDuIDEsNzUg6yIgU009IjU4OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEM9IjEzOTIiIENEPSIyNTAwMTUwMjY4NDEiIE49IjciIE5NPSLR5e3k4rP3IOcg4fPm5e3o7e7+IDIxMOMsIPjyIiBTTT0iNzk5MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iMTA3IiBDRD0iMjA2NTUwOTUwMDAwOCIgTj0iOCIgTk09ItHl7eTis/cg5yDh5eru7e7sIPLgIPHq8OXs4evu7CAxOTDjLCD48iIgU009Ijc5OTAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iMTE3OCIgQ0Q9IjQwMDg0NzI1IiBOPSI5IiBOTT0i0e3l6iDKs+3k5fAgzLPr6iDR6+Dp8SAyOOMiIFBSQz0iMjU5MCIgUT0iMjAwMCIgU009IjUxODAiIFRYPSIxIj48L1A+PFAgQVRfVEw9IjAiIEFUX1RNPSL48iIgQz0iNDE0IiBDRD0iNDAwODQwMDU1MzAyMyIgTj0iMTAiIE5NPSLR7eXqIMqz7eTl8CDM4OrxsyDKs+3jIDM14yIgUFJDPSI0NDkwIiBRPSIyMDAwIiBTTT0iODk4MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQz0iODciIENEPSI3NjIyMzAwMjc1MTQzIiBOPSIxMSIgTk09IsGz8eris/Ig7O7r7vft6OkgweDw7bMgMzDjIiBTTT0iMTY3MCIgVFg9IjEiPjwvUD48UCBBVF9UTD0iMCIgQVRfVE09IvjyIiBDPSIxMzkzIiBDRD0iNDgyMDE5NTE1MDMwNiIgTj0iMTIiIE5NPSLX4OkgzuHrs+/o9e7i6Okg0ezg6vPp8uUgNDDjIiBQUkM9IjE4NTAiIFE9IjIwMDAiIFNNPSIzNzAwIiBUWD0iMSI+PC9QPjxMIE49IjEzIj5UUz0yNjA0MjkyMjE5MjU8L0w+PE0gQVRfTj0iMyIgQVRfU0lORz0iMCIgTj0iMTQiIE5NPSLBxcfDztKywsrOwsAiIFBBPSLP8Oji4PLB4O3qIiBQQj0iUzEyMTBKUUQiIFBDPSLOz8vA0sAiIFBEPSI0MDU2MTQ5NTlYWFhYWFgxIiBQRT0iMTQxNTQxIiBQRj0iMCIgUFNOTT0iVklTQSIgUlJOPSIxMTEyMjgwMDU0NjUiIFNNPSI0Mzc0MCIgVD0iMSI+PC9NPjxMIE49IjE1Ij7K4PDy6uA8L0w+PEwgTj0iMTYiPiAgICDP0M7D0MDMwCDLzt/L3M3O0dJJPC9MPjxMIE49IjE3Ij7N4PDg9e7i4O3uIOHu7fPx7ej1IOPw6OLl7fw6IDMsMzI8L0w+PEwgTj0iMTgiPsTu8fLz7+3uIOHu7fPx7ej1IOPw6OLl7fw6IDExOSw5PC9MPjxMIE49IjE5Ij7K4PDy6uA6ICoqKjQ5OTUqPC9MPjxMIE49IjIwIj7HwMzOwsvfydLFIM/QzsTTytLIIM3APC9MPjxMIE49IjIxIj5WQVJVUy5VQSDBxcfKztjSzsLNwDwvTD48TCBOPSIyMiI+xM7R0sDCysAgwrLEIDE2OTnD0M08L0w+PEUgQVRfTlM9IjU5NCIgQ1M9IjE1IiBGTj0iMzAwMDkwOTkwOCIgTj0iMjMiIE5PPSI2OTY1ODIiIFNNPSI0Mzc0MCIgVFM9IjIwMjYwNDI5MjIyMDA2Ij48VFggQVRfTk09Is/Ewl/AIiBBVF9UTD0iMCIgVFg9IjEiIFRYQUw9IjAiIFRYUFI9IjIwLjAwIiBUWFNNPSI3MjkwIiBUWFRZPSIwIj48L1RYPjwvRT48L0M+PFRTPjIwMjYwNDI5MjIyMDA2PC9UUz48L0RBVD48TUFDIERJPSI2Nzg2NjEiIE5UPSIzMjIyODU4MjM2Ij5BQm9BQUFkQUFBQUFBQllBRVpubUFBcGJVZ2J6TDlQQWdmQzZ6Z1k9PC9NQUM+PC9SUT4=",
+                                                                                                           "checkP7s":  null
+                                                                                                       }
+                                                                             }
+                                                         }
+                                                     ]
+                                     },
+                        "error":  null,
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "75e65f3b-86e6-4564-9296-3425b38c1396",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  30,
+                        "userId":  "single-user-30",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  67076.19,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "21811a13-3235-4ac8-91c5-a91f2f8ed713",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  31,
+                        "userId":  "single-user-31",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  88468.27,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "c7be1c8c-f743-49f0-8c0a-1184d5054009",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  32,
+                        "userId":  "single-user-32",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  130992.72,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "4b30e554-9e9e-4c52-8ba2-11ac0a2e02dd",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  33,
+                        "userId":  "single-user-33",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  109772.39,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "c86e69ce-7a96-4cdc-8c00-c1b84b0229c7",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  34,
+                        "userId":  "single-user-34",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  181854.31,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "11654b92-92ac-4c76-883a-e8f529ca8585",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  35,
+                        "userId":  "single-user-35",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  194798.74,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "39ca2054-5399-4b22-8e88-acb7c5c30c67",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  36,
+                        "userId":  "single-user-36",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  217283.26,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "9f2f49b0-16c9-4683-bcab-c5325554ecd9",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  37,
+                        "userId":  "single-user-37",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  160454.12,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "16620ca1-5a30-41a1-bfac-cac083e62334",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  38,
+                        "userId":  "single-user-38",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  130633.21,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "f392b477-065e-42c8-a3c3-681c0b9f56bc",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  39,
+                        "userId":  "single-user-39",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  45788.95,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "f7f1c6f4-4a7f-4c70-a2cb-badffdb505d4",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  40,
+                        "userId":  "single-user-40",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  174314,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "8909c768-b786-4507-91e1-d111c5bb4c62",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  41,
+                        "userId":  "single-user-41",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  203269.4,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "098dfbf3-4f42-482d-8710-f63198ed466b",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  42,
+                        "userId":  "single-user-42",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  109383.41,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "2a10ef10-e19a-4a67-ae62-aef7cf105e1a",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  43,
+                        "userId":  "single-user-43",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  224610.76,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "8f881f9d-c32e-4b5f-ad88-2a42689f60b0",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  44,
+                        "userId":  "single-user-44",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  237870.07,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "5016f70a-e763-4e6b-8033-c24ade2f39d5",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  45,
+                        "userId":  "single-user-45",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  96352.38,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "b3c06f9d-eb05-463b-a9ad-b49f461876b5",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  46,
+                        "userId":  "single-user-46",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  152313.58,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "6ae72764-1025-4952-b176-7dd7177968e7",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  47,
+                        "userId":  "single-user-47",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  195049.15,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "b4d8ca3a-7a59-4519-9484-81890f44f3d3",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  48,
+                        "userId":  "single-user-48",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  75132.32,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "5b0affa8-930c-482d-977c-030d420a02c7",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  49,
+                        "userId":  "single-user-49",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  152781.39,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "3b6d3ca3-65d8-41e8-a3ce-baac9f84fcf3",
+                        "PSShowComputerName":  false
+                    },
+                    {
+                        "requestNumber":  50,
+                        "userId":  "single-user-50",
+                        "kind":  "single",
+                        "receiptCount":  1,
+                        "status":  "failed",
+                        "durationMs":  195679.63,
+                        "response":  null,
+                        "error":  "The underlying connection was closed: The connection was closed unexpectedly.",
+                        "PSComputerName":  "localhost",
+                        "RunspaceId":  "6b1e45a6-4ea6-477d-a909-71aaf12d7b26",
+                        "PSShowComputerName":  false
+                    }
+                ]
+}

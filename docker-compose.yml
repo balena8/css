@@ -1,0 +1,32 @@
+services:
+  check-stateless-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GO_VERSION: "1.26.2"
+
+        # Use "." if package main is in the project root.
+        # Use "./cmd/server" if main.go is inside cmd/server.
+        MAIN_PACKAGE: "./cmd/main.go"
+
+    container_name: check-stateless-server
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      # Runtime config is mounted, not baked into the image.
+      - ./config.docker.yaml:/app/config/config.docker.yaml:ro
+
+      # API keys are mounted as files so secrets are not stored in the image.
+      - ./secrets:/app/secrets:ro
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
